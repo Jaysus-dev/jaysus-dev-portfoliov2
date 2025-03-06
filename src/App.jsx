@@ -9,7 +9,10 @@ function App() {
         <AsideNav />
       </aside>
       <main className="main-content" id="main">
-        About
+        <section className="main-section section grid"> Profle</section>
+        <section className="main-section section grid"> Career Path</section>
+        <section className="main-section section grid"> Info</section>
+        <section className="main-section section grid"> Info</section>
       </main>
     </div>
   );
