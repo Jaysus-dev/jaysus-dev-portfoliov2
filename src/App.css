@@ -1,42 +1,224 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/*==fonts==*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/*==variable-CSS==*/
+:root {
+  --header-height: 3rem;
+
+  /*==Colors==*/
+  /*==Color-mode-HSL==*/
+  --hue: 0;
+  --sat: 0%;
+  --body-color: #121212;
+  --container-color: #31473a;
+  --title-color: #a1be95;
+  --title-color-dark: #31473a;
+  --text-color: #eae7e6;
+  --desc-color: #999999;
+
+  /*==Font-Typography==*/
+  --body-font: "Outfit", sans-serif;
+
+  /*.5rem=8px|1rem=16px*/
+  --big-font-size: 3.5rem;
+  --h1-font-size: 3.3rem;
+  --h2-font-size: 2.5rem;
+  --h3-font-size: 1.5rem;
+  --normal-font-size: 1.1rem;
+  --small-font-size: 0.975rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.725rem;
+
+  /*.font-weight*/
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*.Margins-Bottom*/
+  /*.5rem=8px|1rem=16px*/
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*.z-index*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/*.Base*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+/*.Reusable-CSS-Class*/
+.section {
+  padding: 6rem 0 6rem 0;
+}
+
+.section-title {
+  font-size: var(--h2-font-size);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--normal-font-size);
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #666;
+}
+
+.section-title,
+.section-subtitle {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/*.Lay-out*/
+.main-container {
+  grid-template-columns: repeat(1, 1.3fr 2fr);
+  height: 100vh;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+  max-width: 1270px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 25px 0 25px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+/*.buttons*/
+.button {
+  display: inline-block;
+  border: 1px solid var(--title-color);
+  color: var(--text-color);
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--title-color-dark);
+}
+
+.button-icon {
+  margin-left: var(--mb-0-5);
+  color: var(--text-color);
+}
+
+.button-flex {
+  display: inline-block;
+  align-items: center;
+}
+
+/*break-points*/
+/*LG-Device*/
+@media screen and (max-width: 1024px) {
+  /*.Responsive-Typography*/
+  :root {
+    --big-font-size: 2.75rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 2.15rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
   }
-  to {
-    transform: rotate(360deg);
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button-icon {
+    width: 22px;
+    height: 22px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/*MD-Device*/
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--header-height);
+  }
+  .container {
+    padding: 0 2rem 0 2rem;
+  }
+
+  .section {
+    padding: 3.5rem 0 3.5rem;
+  }
+
+  .section-subtitle {
+    margin-bottom: var(--mb-3);
   }
 }
 
-.card {
-  padding: 2em;
+@media screen and (max-width: 576px) {
 }
 
-.read-the-docs {
-  color: #888;
+/*SM-Device*/
+@media screen and (max-width: 425px) {
+  :root {
+    --big-font-size: 3.5rem;
+  }
+
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+    padding: 0;
+  }
 }
