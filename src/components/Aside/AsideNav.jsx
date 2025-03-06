@@ -1,44 +1,23 @@
 import React from "react";
-import { IoPersonOutline } from "react-icons/io5";
-import { HiOutlineBriefcase } from "react-icons/hi2";
-import { PiImageLight } from "react-icons/pi";
+import { iconComponents } from "../../assets/json/Icon";
+import Data from "../../assets/json/Data.json";
 
 function AsideNav() {
-  const links = [
-    {
-      className: "nav-icon",
-      icon: <IoPersonOutline />,
-      title: "<About />",
-      to: "#",
-    },
-    {
-      className: "nav-icon",
-      icon: <HiOutlineBriefcase />,
-      title: "<Expertise />",
-      to: "#",
-    },
-    {
-      className: "nav-icon",
-      icon: <PiImageLight />,
-      title: "<Portfolio />",
-      to: "#",
-    },
-  ];
-
   return (
     <nav className="aside-list grid">
-      <li className="aside-item">
-        {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.to}
-            className={`aside-link ${link.className}`}
-          >
-            {link.icon}
-            {link.title}
-          </a>
-        ))}
-      </li>
+      <ul>
+        {Data.links.map((link, index) => {
+          const IconComponent = iconComponents[link.icon]; // Get the icon component
+          return (
+            <li key={index} className="aside-item">
+              <a href={link.to} className={`aside-link ${link.className}`}>
+                <IconComponent /> {/* Render the icon */}
+                {link.title}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
     </nav>
   );
 }

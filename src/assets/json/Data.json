@@ -1,0 +1,51 @@
+{
+  "typewriter": {
+    "words": [
+      "Frontend Web Developer",
+      "Junior Web Developer",
+      "UI/UX Designer",
+      "Graphic Artist"
+    ],
+    "typeSpeed": 100,
+    "deleteSpeed": 40,
+    "loop": true
+  },
+  "links": [
+    {
+      "className": "nav-icon",
+      "icon": "IoPersonOutline",
+      "title": "<About />",
+      "to": "#"
+    },
+    {
+      "className": "nav-icon",
+      "icon": "HiOutlineBriefcase",
+      "title": "<Expertise />",
+      "to": "#"
+    },
+    {
+      "className": "nav-icon",
+      "icon": "PiImageLight",
+      "title": "<Portfolio />",
+      "to": "#"
+    }
+  ],
+  "socials": [
+    {
+      "icon": "FaFacebookSquare",
+      "link": "https://www.facebook.com/the2nddd"
+    },
+    {
+      "icon": "RiInstagramFill",
+      "link": "https://www.instagram.com/aintjaysus/"
+    },
+    {
+      "icon": "FaLinkedin",
+      "link": "https://www.linkedin.com/in/222371303/"
+    },
+    {
+      "icon": "FaGithub",
+      "link": "https://github.com/Jaysus-dev"
+    }
+  ]
+}

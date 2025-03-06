@@ -1,14 +1,9 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { RiSendPlaneFill, RiVerifiedBadgeFill } from "react-icons/ri";
+import Data from "../../assets/json/Data.json";
 
 function AsideData() {
-  const [typeWriter] = useTypewriter({
-    words: ["Frontend Web Developer", "UI/UX Designer", "Graphic Artist"],
-    typeSpeed: 100,
-    deleteSpeed: 40,
-    loop: true,
-  });
+  const [typeWriter] = useTypewriter(Data.typewriter);
 
   return (
     <div className="aside-data">
