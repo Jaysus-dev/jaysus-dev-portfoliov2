@@ -98,23 +98,19 @@
   content: "";
   position: absolute;
   width: 0;
-  height: 1px;
-  background-color: var(--desc-color);
-  left: 0;
-  top: 0.9rem;
 }
 
 .aside-link:hover {
   padding-left: 3.5rem;
-  transition: 0.3s ease-in-out;
   color: var(--title-color);
+  transition: 0.2s ease-in;
 }
 .aside-link:hover::before {
   content: "";
   position: absolute;
   width: 40px;
   height: 1px;
-  background-color: var(--desc-color);
+  background-color: var(--title-color);
   left: 0;
   top: 0.9rem;
   transition: 0.3s ease-in-out;
