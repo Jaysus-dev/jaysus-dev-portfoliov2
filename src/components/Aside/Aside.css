@@ -86,6 +86,7 @@
   transition: 0.3s;
 }
 .aside-link {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the link */
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -93,11 +94,30 @@
   color: var(--desc-color);
   padding: 0.5rem 0 0.5rem;
 }
+.aside-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: var(--desc-color);
+  left: 0;
+  top: 0.9rem;
+}
 
 .aside-link:hover {
-  padding-left: 2.5rem;
-  transition: 0.2s ease-in-out;
+  padding-left: 3.5rem;
+  transition: 0.3s ease-in-out;
   color: var(--title-color);
+}
+.aside-link:hover::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: var(--desc-color);
+  left: 0;
+  top: 0.9rem;
+  transition: 0.3s ease-in-out;
 }
 .aside-bot i {
   display: flex;

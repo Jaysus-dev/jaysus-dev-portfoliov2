@@ -13,6 +13,12 @@ function App() {
         <section className="main-section section grid"> Career Path</section>
         <section className="main-section section grid"> Info</section>
         <section className="main-section section grid"> Info</section>
+        <section className="main-section section grid"> Info</section>
+        <section className="main-section section grid"> Info</section>
+        <section className="main-section section grid"> Info</section>
+        <section className="main-section section grid"> Info</section>
+        <section className="main-section section grid"> Info</section>
+        <section className="main-section section grid"> Info</section>
       </main>
     </div>
   );
