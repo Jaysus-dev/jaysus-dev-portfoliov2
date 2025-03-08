@@ -14,7 +14,7 @@
     {
       "className": "nav-icon",
       "icon": "IoPersonOutline",
-      "title": "<About />",
+      "title": "<Profile />",
       "to": "#"
     },
     {

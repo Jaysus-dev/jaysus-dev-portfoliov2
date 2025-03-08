@@ -21,3 +21,14 @@
     transform: translateY(3.75rem);
   }
 }
+
+@keyframes ping-large {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

@@ -8,7 +8,7 @@ function App() {
       <aside className="main-aside grid" id="aside">
         <AsideNav />
       </aside>
-      <main className="main-content" id="main">
+      <main className="main-content " id="main">
         <section className="main-section section grid"> Profle</section>
         <section className="main-section section grid"> Career Path</section>
         <section className="main-section section grid"> Info</section>

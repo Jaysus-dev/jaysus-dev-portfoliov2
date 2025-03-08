@@ -12,6 +12,26 @@
   row-gap: 1.5rem;
   justify-content: space-between;
 }
+.aside-online {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aside-stat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--body-color);
+  border: solid 1px var(--desc-color);
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  font-size: var(--tiny-font-size);
+}
+.aside-ping {
+  color: #00ff40;
+  animation: ping-large 1s infinite;
+}
 .aside-content {
   display: flex;
   column-gap: 2rem;
@@ -39,18 +59,19 @@
   flex-direction: column;
   gap: 3rem;
 }
+
 .aside-title {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: var(--big-font-size);
+  font-size: var(--h1-font-size);
   font-weight: var(--font-semi-bold);
-  color: var(--title-color);
+  color: var(--text-color);
 }
 .aside-subtitle::before {
   content: "";
   position: absolute;
-  width: 50px;
+  width: 40px;
   height: 2px;
   background-color: var(--title-color-dark);
   left: 0;
@@ -58,8 +79,8 @@
 }
 .aside-subtitle {
   position: relative;
-  padding-left: 3.5rem;
-  color: var(--desc-color);
+  padding-left: 3rem;
+  color: var(--title-color);
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
 }
@@ -86,38 +107,42 @@
   transition: 0.3s;
 }
 .aside-link {
-  position: relative; /* Ensure the pseudo-element is positioned relative to the link */
+  position: relative;
   display: flex;
-  flex-direction: row;
   gap: 0.5rem;
   align-items: center;
   color: var(--desc-color);
-  padding: 0.5rem 0 0.5rem;
+  padding: 0.5rem 0 0.5rem 2rem;
 }
 .aside-link::before {
   content: "";
   position: absolute;
-  width: 0;
+  background-color: var(--desc-color);
+  width: 20px;
+  height: 1px;
+  left: 0;
+  top: 0.9rem;
 }
 
 .aside-link:hover {
-  padding-left: 3.5rem;
+  padding-left: 4.5rem;
   color: var(--title-color);
   transition: 0.2s ease-in;
 }
 .aside-link:hover::before {
   content: "";
   position: absolute;
-  width: 40px;
+  width: 60px;
   height: 1px;
   background-color: var(--title-color);
   left: 0;
   top: 0.9rem;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in;
 }
-.aside-bot i {
+.aside-bot {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 0.2rem;
   font-size: var(--tiny-font-size);
   color: var(--desc-color);
 }

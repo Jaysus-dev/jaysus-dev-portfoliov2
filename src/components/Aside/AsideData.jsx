@@ -1,5 +1,8 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { RiSendPlaneFill, RiVerifiedBadgeFill } from "react-icons/ri";
+import { RiRadioButtonLine } from "react-icons/ri";
+
 import Data from "../../assets/json/Data.json";
 
 function AsideData() {
