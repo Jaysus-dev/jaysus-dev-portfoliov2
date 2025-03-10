@@ -10,6 +10,7 @@
     "deleteSpeed": 40,
     "loop": true
   },
+
   "links": [
     {
       "className": "nav-icon",
@@ -30,6 +31,7 @@
       "to": "#"
     }
   ],
+
   "socials": [
     {
       "icon": "FaFacebookSquare",
@@ -46,6 +48,47 @@
     {
       "icon": "FaGithub",
       "link": "https://github.com/Jaysus-dev"
+    }
+  ],
+
+  "profile": [
+    {
+      "name": "Jay Estoquia",
+      "className": "profile__icon",
+      "icon": "RiVerifiedBadgeFill",
+      "subname": "@jaysusdev"
+    }
+  ],
+
+  "tweet": [
+    {
+      "text": "I`m a front-end developer based in Makati City, Philippines, specializing in crafting accessible precision-driven designs. I develop responsive, user-friendly websites using ",
+      "strong": ["HTML, CSS, JavaScript", "ReactJS", "TailwindCSS"]
+    },
+    {
+      "text": "In my previous role at ",
+      "strong": [
+        "BDI Capital Ltd.",
+        "Junior Web Developer",
+        "full-stack focus"
+      ],
+      "textAfter": ", building and maintaining websites. My role included managing website hosting, deployment, and email domain configuration."
+    },
+    {
+      "text": "Currently, I’m enhancing my expertise through courses on platforms like ",
+      "strong": ["Coursera", "Udemy"],
+      "textAfter": ", focusing on front-end development and modern frameworks."
+    },
+    {
+      "text": "My goal is to transition into a ",
+      "strong": [
+        "full-stack developer",
+        "forward-thinking company",
+        "innovative projects",
+        "lifelong learning",
+        "impactful digital experiences"
+      ],
+      "textAfter": " while advancing my career. Outside work, I explore new technologies, work on personal projects, and embrace "
     }
   ]
 }

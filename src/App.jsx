@@ -9,7 +9,7 @@ function App() {
       <aside className="main-aside  grid" id="aside">
         <AsideNav />
       </aside>
-      <main className="main-content section  " id="main">
+      <main className="main-content  " id="main">
         <Profile />
       </main>
     </div>

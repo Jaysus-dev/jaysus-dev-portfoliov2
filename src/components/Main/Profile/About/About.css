@@ -1,0 +1,81 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.profile__container {
+  grid-template-columns: 2 1fr; /* Adjust as needed */
+  gap: 1.5rem; /* Space between profile data and tweet */
+  align-items: start;
+}
+
+.profile__data {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile__pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile__name {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__name h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0;
+}
+
+.profile__icon {
+  color: rgb(30, 146, 253);
+}
+
+.profile__name span {
+  color: var(--desc-color);
+  font-weight: normal;
+}
+
+.profile__tweet {
+  line-height: 1.6;
+  font-size: var(--normal-font-size);
+  color: var(--desc-color);
+}
+
+.profile__tweet strong {
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+
+.profile__tweet p {
+  margin: 0 0 1rem 0; /* Add spacing between paragraphs */
+}
+
+.profile__tweet p:last-child {
+  margin-bottom: 0; /* Remove margin for the last paragraph */
+}
+.profile__scroll-button {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.wheel {
+  animation: scroll 2s ease infinite;
+}
+
+.profile__scroll-name {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}

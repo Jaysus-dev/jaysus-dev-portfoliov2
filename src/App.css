@@ -124,6 +124,7 @@ textarea {
 .main-container {
   grid-template-columns: repeat(1, 1.8fr 2fr);
 }
+
 .container {
   max-width: 1270px;
   margin-left: auto;
