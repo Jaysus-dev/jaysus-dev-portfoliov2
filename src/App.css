@@ -14,7 +14,7 @@
   --title-color: #a1be95;
   --title-color-dark: #31473a;
   --text-color: #eae7e6;
-  --desc-color: #999999;
+  --desc-color: #b1b1b1;
 
   /*==Font-Typography==*/
   --body-font: "Outfit", sans-serif;
@@ -100,7 +100,7 @@ textarea {
 
 /*.Reusable-CSS-Class*/
 .section {
-  padding: 4rem 0 4rem 0;
+  padding: 6rem 0 6rem 0;
 }
 
 .section-title {
@@ -122,7 +122,7 @@ textarea {
 
 /*.Lay-out*/
 .main-container {
-  grid-template-columns: repeat(1, 1.5fr 2fr);
+  grid-template-columns: repeat(1, 1.8fr 2fr);
 }
 .container {
   max-width: 1270px;

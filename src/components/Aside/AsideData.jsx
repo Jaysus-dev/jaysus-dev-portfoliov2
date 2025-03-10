@@ -9,9 +9,9 @@ function AsideData() {
   const [typeWriter] = useTypewriter(Data.typewriter);
 
   return (
-    <div className="aside-data">
-      <h1 className="aside-title">Jay Estoquia</h1>
-      <h3 className="aside-subtitle">
+    <div className="asid__data">
+      <h1 className="aside__title">Jay Estoquia</h1>
+      <h3 className="aside__subtitle">
         {typeWriter}
         <Cursor cursorStyle=";" />
       </h3>

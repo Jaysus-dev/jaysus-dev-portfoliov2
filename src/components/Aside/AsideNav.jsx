@@ -4,13 +4,13 @@ import Data from "../../assets/json/Data.json";
 
 function AsideNav() {
   return (
-    <nav className="aside-list grid">
+    <nav className="aside__list grid">
       <ul>
         {Data.links.map((link, index) => {
           const IconComponent = iconComponents[link.icon]; // Get the icon component
           return (
-            <li key={index} className="aside-item">
-              <a href={link.to} className={`aside-link ${link.className}`}>
+            <li key={index} className="aside__item">
+              <a href={link.to} className={`aside__link ${link.className}`}>
                 <IconComponent /> {/* Render the icon */}
                 {link.title}
               </a>

@@ -1,0 +1,39 @@
+.profile__container {
+  border-radius: 0.5rem;
+}
+.profile__data {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.profile__pic {
+  width: 100%;
+  max-width: 60px;
+  border-radius: 50%;
+}
+.profile__name {
+  display: flex;
+  flex-direction: column;
+}
+.profile__name h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.profile__name h3 .profile__icon {
+  color: rgb(30, 146, 253);
+}
+.profile__name span {
+  color: var(--desc-color);
+  font-weight: normal;
+}
+.profile__tweet {
+  line-height: 1.6rem;
+  font-size: var(--normal-font-size);
+  color: var(--desc-color);
+  font-weight: var(--font-normal);
+}
+.profile__tweet strong {
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
