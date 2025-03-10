@@ -60,35 +60,104 @@
     }
   ],
 
-  "tweet": [
+  "career": [
     {
-      "text": "I`m a front-end developer based in Makati City, Philippines, specializing in crafting accessible precision-driven designs. I develop responsive, user-friendly websites using ",
-      "strong": ["HTML, CSS, JavaScript", "ReactJS", "TailwindCSS"]
+      "id": "academic",
+      "title": "Rizal Technologial University",
+      "image": "src/assets/img/RTU_Logo.jpg",
+      "date": "Jun 2019 — Aug 2023",
+      "subtitle": "BS in Information Technology",
+      "desc": "I gained knowledge in programming, software development, and database management. Through hands-on projects, I developed skills in creating IT solutions, solving technical challenges, and implementing systems for efficiency and growth, preparing me for the evolving tech industry.",
+      "tech": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" },
+        { "name": "PHP" },
+        { "name": "Python" }
+      ]
     },
     {
-      "text": "In my previous role at ",
-      "strong": [
-        "BDI Capital Ltd.",
-        "Junior Web Developer",
-        "full-stack focus"
-      ],
-      "textAfter": ", building and maintaining websites. My role included managing website hosting, deployment, and email domain configuration."
+      "id": "academic",
+      "title": "AMA CLC — Guadalupe",
+      "image": "src/assets/img/ACLC_Logo.png",
+      "date": "Jul 2017 — May 2019",
+      "subtitle": "Information Communications and Technology",
+      "desc": "As an ACLC ICT Programming student, I learned to build and maintain software, preparing for a role in tech innovation and digital transformation.",
+      "tech": [
+        { "name": "Java" },
+        { "name": "Visual Basic" },
+        { "name": ".Net" }
+      ]
     },
     {
-      "text": "Currently, I’m enhancing my expertise through courses on platforms like ",
-      "strong": ["Coursera", "Udemy"],
-      "textAfter": ", focusing on front-end development and modern frameworks."
+      "id": "academic",
+      "title": "San Agustin Academy",
+      "image": "src/assets/img/SAGA_Logo.png",
+      "date": "Jun 2013 — Apr 2019",
+      "subtitle": "CAL Excellence Awardee",
+      "desc": "My vocational course sparked my passion for technology, where I discovered the power of solving problems and creating solutions through IT. This early inspiration drives my journey in the tech world.",
+      "tech": [{ "name": "Visual Basic" }]
     },
     {
-      "text": "My goal is to transition into a ",
-      "strong": [
-        "full-stack developer",
-        "forward-thinking company",
-        "innovative projects",
-        "lifelong learning",
-        "impactful digital experiences"
-      ],
-      "textAfter": " while advancing my career. Outside work, I explore new technologies, work on personal projects, and embrace "
+      "id": "work",
+      "title": "BDI Capital Ltd.",
+      "image": "src/assets/img/BDI_Logo.png",
+      "date": "Jun 2024 — Jan 2025",
+      "subtitle": "Junior Web Developer",
+      "desc": "Website development, graphic design, digital marketing, and AI transformation initiatives. Collaborate with internal teams and clients to create and maintain websites, design graphics, and drive AI transformation projects.",
+      "tech": [
+        { "name": "HTML5" },
+        { "name": "JavaScript" },
+        { "name": "Vite+ReactJS" },
+        { "name": "TailwindCSS" },
+        { "name": "PHP" },
+        { "name": "GitHub" }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "Capstone",
+      "image": "src/assets/img/RTU_Logo.jpg",
+      "date": "Nov 2022 — Mar 2023",
+      "subtitle": "Frontend Web Developer • UI/UX Designer",
+      "desc": "Made visually appealing and user-friendly interfaces for a Web-based Student Services Management System.",
+      "tech": [
+        { "name": "Figma" },
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "Bootstrap" },
+        { "name": "JavaScript" },
+        { "name": "GitHub" }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "B3S Telecommunications Inc.",
+      "image": "src/assets/img/BDI_Logo.png",
+      "date": "Feb — Aug 2022",
+      "subtitle": "Internship • Web Developer",
+      "desc": "Gained hands-on experience in building and maintaining websites, collaborating with teams, and solving real-world coding challenges.",
+      "tech": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },
+    {
+      "id": "work",
+      "title": "Commission of Elections",
+      "image": "src/assets/img/COMELEC_Logo.png",
+      "date": "Mar — May 2022",
+      "subtitle": "Technical Support Staff"
+    },
+    {
+      "id": "work",
+      "title": "Freelance",
+      "image": "src/assets/img/FREELANCE_Logo.png",
+      "date": "2019 — 2020",
+      "subtitle": "Graphic Artist",
+      "desc": "Crafted unique and impactful designs, from logos to digital illustrations.",
+      "tech": [{ "name": "Photoshop" }, { "name": "Illustrator" }]
     }
   ]
 }

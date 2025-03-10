@@ -4,6 +4,7 @@ import { HiOutlineBriefcase } from "react-icons/hi2";
 import { PiImageLight } from "react-icons/pi";
 import { FaFacebookSquare, FaLinkedin, FaGithub } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import rtu from "../../../public/img/RTU_Logo.jpg";
 
 // Typewriter configuration
 export const useTypeWriter = () => {

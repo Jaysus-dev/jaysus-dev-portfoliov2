@@ -1,6 +1,6 @@
 import React from "react";
 import { iconComponents } from "../../assets/json/Icon";
-import Data from "../../assets/json/Data.json";
+import Data from "../../../src/assets/json/Data.json";
 
 function AsideNav() {
   return (
