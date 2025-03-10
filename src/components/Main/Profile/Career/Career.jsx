@@ -7,7 +7,7 @@ function Career() {
       <h2 className="section-title">Career Path.</h2>
       <span className="section-subtitle">Evolving every step of the way</span>
       <div className="career__container grid">
-        <div className="career__wrapper">
+        <div className="career__wrapper ">
           <h3 className="career__header" id="work">
             Professional Growth
           </h3>
