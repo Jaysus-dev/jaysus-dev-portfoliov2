@@ -137,7 +137,7 @@
   content: "";
   position: absolute;
   width: 60px;
-  height: 1px;
+  height: 2px;
   background-color: var(--title-color);
   left: 0;
   top: 0.9rem;

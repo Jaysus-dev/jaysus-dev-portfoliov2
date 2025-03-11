@@ -58,8 +58,8 @@
 }
 
 body {
-  background-color: var(--body-color);
   color: var(--text-color);
+  background-color: var(--body-color);
 }
 
 h1,

@@ -88,7 +88,7 @@
   line-height: 22px;
   font-size: var(--small-font-size);
   color: var(--desc-color);
-
+  margin-bottom: var(--mb-0-75);
   font-weight: 400;
 }
 .career__skill {
