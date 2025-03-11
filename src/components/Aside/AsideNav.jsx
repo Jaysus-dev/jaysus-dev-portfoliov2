@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { iconComponents } from "../../assets/json/Icon";
 import Data from "../../../src/assets/json/Data.json";
+import { Link } from "react-router-dom";
 
 function AsideNav() {
+  const [activeNav, setActiveNav] = useState("/profile");
   return (
     <nav className="aside__list grid">
       <ul>
@@ -10,10 +12,16 @@ function AsideNav() {
           const IconComponent = iconComponents[link.icon]; // Get the icon component
           return (
             <li key={index} className="aside__item">
-              <a href={link.to} className={`aside__link ${link.className}`}>
-                <IconComponent /> {/* Render the icon */}
+              <Link
+                to={link.to}
+                onClick={() => setActiveNav(link.to)}
+                className={`${link.className} ${
+                  activeNav === link.to ? "active-link" : ""
+                } `}
+              >
+                <IconComponent />
                 {link.title}
-              </a>
+              </Link>
             </li>
           );
         })}

@@ -113,6 +113,7 @@
   align-items: center;
   color: var(--desc-color);
   padding: 0.5rem 0 0.5rem 2rem;
+  transition: 0.2s ease-in;
 }
 .aside__link::before {
   content: "";
@@ -122,14 +123,17 @@
   height: 1px;
   left: 0;
   top: 0.9rem;
+  transition: 0.2s ease-in;
 }
 
-.aside__link:hover {
+.aside__link:hover,
+.active-link {
   padding-left: 4.5rem;
   color: var(--title-color);
   transition: 0.2s ease-in;
 }
-.aside__link:hover::before {
+.aside__link:hover::before,
+.active-link::before {
   content: "";
   position: absolute;
   width: 60px;

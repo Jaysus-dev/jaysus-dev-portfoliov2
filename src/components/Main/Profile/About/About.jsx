@@ -53,12 +53,11 @@ function About() {
 
           <p>
             My goal is to transition into a{" "}
-            <strong>full-stack developer</strong> role at a{" "}
-            <strong>forward-thinking company</strong>, contributing to{" "}
-            <strong>innovative projects</strong> while advancing my career.
-            Outside work, I explore new technologies, work on personal projects,
-            and embrace <strong>lifelong learning</strong> to create{" "}
-            <strong>impactful digital experiences</strong>.
+            <strong>full-stack developer</strong> role at a forward-thinking
+            company, contributing to <strong>innovative projects</strong> while
+            advancing my career. Outside work, I explore new technologies, work
+            on personal projects, and embrace <strong>lifelong learning</strong>{" "}
+            to create <strong>impactful digital experiences</strong>.
           </p>
         </article>
       </div>

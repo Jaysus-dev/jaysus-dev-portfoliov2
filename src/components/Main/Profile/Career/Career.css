@@ -67,6 +67,7 @@
 }
 .career__date {
   font-size: var(--smaller-font-size);
+  color: var(--desc-color);
 }
 .career__top {
   display: flex;

@@ -13,22 +13,22 @@
 
   "links": [
     {
-      "className": "nav-icon",
+      "className": "aside__link ",
       "icon": "IoPersonOutline",
       "title": "<Profile />",
-      "to": "#"
+      "to": "/profile"
     },
     {
-      "className": "nav-icon",
+      "className": "aside__link ",
       "icon": "HiOutlineBriefcase",
       "title": "<Expertise />",
-      "to": "#"
+      "to": "/expertise"
     },
     {
-      "className": "nav-icon",
+      "className": "aside__link ",
       "icon": "PiImageLight",
       "title": "<Portfolio />",
-      "to": "#"
+      "to": "/portfolio"
     }
   ],
 

@@ -1,9 +1,48 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+  ScrollRestoration,
+} from "react-router-dom";
+import App from "./App.jsx";
+import Profile from "./components/Main/Profile/Profile.jsx";
+import Expertise from "./components/Main/Expertise/Expertise.jsx";
+import Portfolio from "./components/Main/Portfolio/Portfolio.jsx";
 
-createRoot(document.getElementById('root')).render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <ScrollRestoration />
+        <App />
+      </>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Navigate to="profile" replace />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "expertise",
+        element: <Expertise />,
+      },
+      {
+        path: "portfolio",
+        element: <Portfolio />,
+      },
+    ],
+  },
+]);
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);
