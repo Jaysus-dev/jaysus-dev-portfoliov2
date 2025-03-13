@@ -9,21 +9,23 @@ import { RiRadioButtonLine } from "react-icons/ri";
 function Aside() {
   return (
     <header className="aside section " id="aside">
-      <div className="aside__container  grid">
-        <div className="aside__online">
-          <p className="aside__stat">
-            <RiRadioButtonLine className="aside__ping" />
-            Available For Hire
-          </p>
-        </div>
-        <div className="aside__content grid">
-          <AsideSocials />
-          <img src={Profile} className="aside__img" alt="aside__profile" />
-        </div>
-        <div className="aside__mid">
-          <AsideData />
-          <div className="aside__nav">
-            <AsideNav />
+      <div className="aside__container">
+        <div className="aside__wrapper  grid">
+          <div className="aside__online">
+            <p className="aside__stat">
+              <RiRadioButtonLine className="aside__ping" />
+              Available For Hire
+            </p>
+          </div>
+          <div className="aside__content">
+            <AsideSocials />
+            <img src={Profile} className="aside__img" alt="aside__profile" />
+          </div>
+          <div className="aside__mid">
+            <AsideData />
+            <div className="aside__nav">
+              <AsideNav />
+            </div>
           </div>
         </div>
       </div>

@@ -88,7 +88,7 @@
   line-height: 22px;
   font-size: var(--small-font-size);
   color: var(--desc-color);
-  margin-bottom: var(--mb-0-75);
+  margin-bottom: var(--mb-0-5);
   font-weight: 400;
 }
 .career__skill {
@@ -103,4 +103,26 @@
   font-size: 0.8rem;
   padding: 5px 10px;
   border-radius: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .career__skill {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 425px) {
+  .career__top {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .career__title {
+    order: 2;
+  }
+  .career__date {
+    order: 1;
+  }
+  .career__line {
+    height: 120%;
+  }
 }

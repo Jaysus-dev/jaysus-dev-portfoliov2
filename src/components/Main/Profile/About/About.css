@@ -7,7 +7,7 @@
 
 .profile__container {
   grid-template-columns: 2 1fr; /* Adjust as needed */
-  gap: 1.5rem; /* Space between profile data and tweet */
+  gap: 0.5rem; /* Space between profile data and tweet */
   align-items: start;
 }
 
@@ -49,6 +49,7 @@
   line-height: 1.6;
   font-size: var(--normal-font-size);
   color: var(--desc-color);
+  width: 100%;
 }
 
 .profile__tweet strong {
@@ -78,4 +79,15 @@
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    height: initial;
+  }
+  .profile__scroll-button {
+    display: none;
+  }
 }

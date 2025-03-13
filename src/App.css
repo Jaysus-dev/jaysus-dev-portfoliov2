@@ -20,6 +20,7 @@
   --body-font: "Outfit", sans-serif;
 
   /*.5rem=8px|1rem=16px*/
+  --big-font-size: 67rem;
   --h1-font-size: 3.5rem;
   --h2-font-size: 2.5rem;
   --h3-font-size: 1.5rem;
@@ -165,13 +166,13 @@ textarea {
 @media screen and (max-width: 1024px) {
   /*.Responsive-Typography*/
   :root {
-    --big-font-size: 2.75rem;
-    --h1-font-size: 2.5rem;
+    --h1-font-size: 3.5rem;
     --h2-font-size: 2.15rem;
     --h3-font-size: 1.5rem;
-    --normal-font-size: 0.938rem;
-    --small-font-size: 0.813rem;
+    --normal-font-size: 0.999rem;
+    --small-font-size: 0.95rem;
     --smaller-font-size: 0.75rem;
+    --tiny-font-size: 0.7rem;
   }
   .container {
     margin-left: var(--mb-1-5);
@@ -203,6 +204,10 @@ textarea {
 
   .section-subtitle {
     margin-bottom: var(--mb-3);
+  }
+  .main-container {
+    grid-template-columns: repeat(1, 2fr);
+    gap: 0rem;
   }
 }
 
