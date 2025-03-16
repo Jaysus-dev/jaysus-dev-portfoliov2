@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
-import { MdOutlineArrowOutward } from "react-icons/md";
 import "./Github.css";
 import axios from "axios";
 
@@ -64,24 +63,22 @@ const GithubContributions = ({ username }) => {
     fetchContributions();
   }, [username]);
 
-  if (loading) {
+  {
+    /*  if (loading) {
     return <p>Loading GitHub contributions...</p>;
   }
 
   if (error) {
     return <p>Error loading GitHub contributions: {error}</p>;
+  } */
   }
 
   return (
-    <div className="git  grid">
+    <div className="git section grid">
       <div className="gitcalendar__container">
         <div className="gitcalendar__wrapper ">
           <div className="gitcalendar__header">
-            <h3>GitHub Contributions</h3>
-            <a className="gitcalendar__profile" href="">
-              GitHub Profile
-              <MdOutlineArrowOutward />
-            </a>
+            <h3 className="section-title">GitHub Contributions</h3>
           </div>
           <GitHubCalendar
             username={username}
@@ -106,7 +103,7 @@ const GithubContributions = ({ username }) => {
         <div className="contributions__header">
           <h3>Contribution Activity</h3>
           <span>
-            <i>note: This is a new GitHub </i>
+            <i>note: this is a new github </i>
           </span>
         </div>
         <div className="contributions__bottom">

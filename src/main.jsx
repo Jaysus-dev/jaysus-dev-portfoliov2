@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
-  Navigate,
   ScrollRestoration,
 } from "react-router-dom";
 import App from "./App.jsx";
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to="profile" replace />,
+        element: <Profile />,
       },
       {
         path: "profile",
