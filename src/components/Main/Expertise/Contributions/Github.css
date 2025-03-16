@@ -1,0 +1,70 @@
+.git {
+  padding-bottom: 6rem;
+  gap: 1rem;
+}
+.gitcalendar__container {
+  display: flex;
+  justify-content: center;
+}
+.gitcalendar__wrapper {
+  width: 100%;
+  max-width: 630px;
+}
+
+.gitcalendar__header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 1rem;
+}
+
+.gitcalendar__profile {
+  display: flex;
+  align-items: end;
+  font-size: var(--smaller-font-size);
+  text-decoration: underline;
+}
+
+.react-activity-calendar__legend-month,
+.react-activity-calendar__legend-weekday > text {
+  font-size: var(--smaller-font-size);
+}
+.react-activity-calendar__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0px !important;
+}
+.react-activity-calendar__legend-colors {
+  margin-left: 0px !important;
+}
+.react-activity-calendar__scroll-container {
+  padding-bottom: 0.75rem;
+}
+.contributions__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contributions__header > h3 {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+.contributions__header > span {
+  font-size: var(--smaller-font-size);
+  color: var(--desc-color);
+}
+.contributions__container {
+  margin-top: 0.5rem;
+  gap: 0.25rem;
+}
+
+.contributions__wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--smaller-font-size);
+}
+
+.recent {
+  font-size: var(--tiny-font-size);
+  color: #555;
+}

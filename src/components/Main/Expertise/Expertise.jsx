@@ -1,12 +1,12 @@
 import React from "react";
 import TechStack from "./TechStack/TechStack";
-import Contributions from "./Contributions/Contributions";
+import Github from "./Contributions/Github";
 
 function Expertise() {
   return (
     <>
       <TechStack />
-      <Contributions />
+      <Github username="jaysus-dev" />
     </>
   );
 }

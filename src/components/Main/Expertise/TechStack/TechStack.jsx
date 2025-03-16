@@ -5,7 +5,7 @@ import tools from "./TechStackData";
 
 function TechStack() {
   return (
-    <section className="expertise section">
+    <section className="techstack section">
       <h2 className="section__title">TechStack.</h2>
       <span className="section__subtitle">
         modern tech for seamless performance
