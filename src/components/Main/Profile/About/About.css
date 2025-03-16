@@ -50,6 +50,7 @@
   font-size: var(--normal-font-size);
   color: var(--desc-color);
   width: 100%;
+  margin-bottom: var(--mb-2-5);
 }
 
 .profile__tweet strong {
@@ -64,6 +65,44 @@
 .profile__tweet p:last-child {
   margin-bottom: 0; /* Remove margin for the last paragraph */
 }
+
+.profile__exp {
+  display: flex;
+  justify-content: space-between;
+}
+.profile__expbox {
+  display: flex;
+  flex-direction: column;
+  width: 8rem;
+  gap: 0.3rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: 0.3s ease-in-out;
+}
+.profile__expbox:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.1)
+  );
+  border: 1px rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  cursor: pointer;
+}
+.profile__expbox > h3 {
+  font-size: var(--normal-font-size);
+}
+.profile__expbox > span {
+  font-size: var(--small-font-size);
+}
+.profile__exp-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
 .profile__scroll-button {
   display: flex;
   gap: 0.5rem;

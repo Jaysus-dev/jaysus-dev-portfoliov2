@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+
 import Profile_pic from "../../../../assets/img/profile.jpg";
 import { iconComponents } from "../../../../assets/json/Icon";
 import Data from "../../../../assets/json/Data.json";
@@ -28,38 +29,42 @@ function About() {
             );
           })}
         </div>
+
         <article className="profile__tweet">
           <p>
-            I’m a front-end developer based in Makati City, Philippines,
-            specializing in crafting accessible precision-driven designs. I
-            develop responsive, user-friendly websites using{" "}
-            <strong>HTML, CSS, JavaScript</strong>, and frameworks like{" "}
-            <strong>ReactJS</strong> and <strong>TailwindCSS</strong>.
+            I’m a front-end developer specializing in crafting accessible
+            precision-driven designs. I develop responsive, user-friendly
+            websites using <strong>HTML, CSS, JavaScript</strong>, and
+            frameworks like <strong>ReactJS</strong> and{" "}
+            <strong>TailwindCSS</strong>.
           </p>
 
           <p>
-            In my previous role at <strong>BDI Capital Ltd.</strong> as a{" "}
-            <strong>Junior Web Developer</strong> with a{" "}
-            <strong>full-stack focus</strong>, building and maintaining
-            websites. My role included managing website hosting, deployment and
-            email domain configuration.
+            Previously, I worked as a <strong>Junior Web Developer</strong> at{" "}
+            <strong>BDI Capital Ltd.</strong>, where I focused on{" "}
+            <strong>full-stack development</strong>. My responsibilities
+            included managing hosting, deployment, and configuring email
+            domains.
           </p>
 
           <p>
-            Currently, I’m enhancing my expertise through courses on platforms
-            like <strong>Coursera</strong> and <strong>Udemy</strong>, focusing
-            on front-end development and modern frameworks.
-          </p>
-
-          <p>
-            My goal is to transition into a{" "}
-            <strong>full-stack developer</strong> role at a forward-thinking
-            company, contributing to <strong>innovative projects</strong> while
-            advancing my career. Outside work, I explore new technologies, work
-            on personal projects, and embrace <strong>lifelong learning</strong>{" "}
-            to create <strong>impactful digital experiences</strong>.
+            Outside of work, I enjoy exploring new technologies, working on
+            personal projects, and embracing lifelong learning to create
+            meaningful digital experiences.
           </p>
         </article>
+        <div className="profile__exp">
+          {Data.exp.map((profile, expIndex) => {
+            const IconComponent = iconComponents[profile.icon];
+            return (
+              <div key={expIndex} className="profile__expbox">
+                <IconComponent className={profile.className} />
+                <h3>{profile.title}</h3>
+                <span>{profile.subtitle}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <Scroll />
     </div>

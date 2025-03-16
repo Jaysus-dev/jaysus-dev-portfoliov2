@@ -3,15 +3,15 @@ import "./Career.css";
 import Data from "../../../../assets/json/Data.json";
 function Career() {
   return (
-    <div className="career section">
-      <h2 className="section-title">Career Path.</h2>
-      <span className="section-subtitle">Evolving every step of the way</span>
+    <section className="career section">
+      <h2 className="section__title">Career Path.</h2>
+      <span className="section__subtitle">Evolving every step of the way</span>
       <div className="career__container grid">
         {["work", "academic"].map((sectionId) => (
           <div className="career__wrapper" key={sectionId}>
             <h3 className="career__header" id={sectionId}>
               {sectionId === "work"
-                ? "Professional Growth"
+                ? "Relevant Experience"
                 : "Academic History"}
             </h3>
             {Data.career
@@ -48,7 +48,7 @@ function Career() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

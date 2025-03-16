@@ -1,10 +1,10 @@
 {
   "typewriter": {
     "words": [
-      "Frontend Web Developer",
+      "UI/UX Enthusiast",
+      "Front-end Web Developer",
       "Junior Web Developer",
-      "UI/UX Designer",
-      "Graphic Artist"
+      "Full Stack Developer II"
     ],
     "typeSpeed": 100,
     "deleteSpeed": 40,
@@ -60,6 +60,27 @@
     }
   ],
 
+  "exp": [
+    {
+      "className": "profile__exp-icon",
+      "icon": "FaCode",
+      "title": "Experience",
+      "subtitle": "2 years"
+    },
+    {
+      "className": "profile__exp-icon",
+      "icon": "GrAchievement",
+      "title": "Completed",
+      "subtitle": "2 Projects"
+    },
+    {
+      "className": "profile__exp-icon",
+      "icon": "FaHeadset",
+      "title": "Support",
+      "subtitle": "Chatbot"
+    }
+  ],
+
   "career": [
     {
       "id": "academic",
@@ -100,6 +121,24 @@
     },
     {
       "id": "work",
+      "title": "NCMH — DOH ",
+      "image": "src/assets/img/NCMH_Logo.jpg",
+      "date": "Mar 2025 — Present",
+      "subtitle": "Fullstack Developer II",
+      "desc": "Website development, graphic design, digital marketing, and AI transformation initiatives. Collaborate with internal teams and clients to create and maintain websites, design graphics, and drive AI transformation projects.",
+      "tech": [
+        { "name": "HTML5" },
+        { "name": "JavaScript" },
+        { "name": "Vue.JS" },
+        { "name": "CSS3" },
+        { "name": "TailwindCSS" },
+        { "name": "PHP" },
+        { "name": "Laravel" },
+        { "name": "GitLab" }
+      ]
+    },
+    {
+      "id": "work",
       "title": "BDI Capital Ltd.",
       "image": "src/assets/img/BDI_Logo.png",
       "date": "Jun 2024 — Jan 2025",
@@ -108,7 +147,7 @@
       "tech": [
         { "name": "HTML5" },
         { "name": "JavaScript" },
-        { "name": "Vite+ReactJS" },
+        { "name": "Vite+React.JS" },
         { "name": "TailwindCSS" },
         { "name": "PHP" },
         { "name": "GitHub" }

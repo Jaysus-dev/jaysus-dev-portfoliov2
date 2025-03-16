@@ -104,11 +104,11 @@ textarea {
   padding: 6rem 0 6rem 0;
 }
 
-.section-title {
+.section__title {
   font-size: var(--h2-font-size);
 }
 
-.section-subtitle {
+.section__subtitle {
   display: block;
   font-size: var(--normal-font-size);
   margin-bottom: 3rem;
@@ -116,8 +116,8 @@ textarea {
   color: #666;
 }
 
-.section-title,
-.section-subtitle {
+.section__title,
+.section__subtitle {
   text-align: center;
 }
 
@@ -223,6 +223,6 @@ textarea {
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
-    padding: 0;
+    padding: 0 0.5rem;
   }
 }

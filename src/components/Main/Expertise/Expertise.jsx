@@ -1,15 +1,13 @@
 import React from "react";
+import TechStack from "./TechStack/TechStack";
+import Contributions from "./Contributions/Contributions";
 
 function Expertise() {
   return (
-    <div className="section section">
-      Expertise
-      <div className="section section">Expertise</div>
-      <div className="section section">Expertise</div>
-      <div className="section section">Expertise</div>
-      <div className="section section">Expertise</div>
-      <div className="section section">Expertise</div>
-    </div>
+    <>
+      <TechStack />
+      <Contributions />
+    </>
   );
 }
 
