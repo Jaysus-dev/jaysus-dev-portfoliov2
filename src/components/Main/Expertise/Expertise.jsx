@@ -6,7 +6,7 @@ function Expertise() {
   return (
     <>
       <TechStack />
-      <Github username="jaysus-dev" />
+      <Github />
     </>
   );
 }

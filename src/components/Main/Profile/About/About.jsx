@@ -8,7 +8,7 @@ import Scroll from "../Scroll";
 
 function About() {
   return (
-    <div className="about section ">
+    <div className="about  section__margin">
       <div className="profile__container grid ">
         <div className="profile__data">
           <img

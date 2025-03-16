@@ -1,8 +1,9 @@
 .about {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 89.5vh;
   justify-content: space-between;
+  padding: 0rem 0 6rem;
 }
 
 .profile__container {
@@ -124,7 +125,8 @@
   .about {
     display: flex;
     flex-direction: column;
-    height: initial;
+    min-height: initial;
+    padding-bottom: 0;
   }
   .profile__scroll-button {
     display: none;

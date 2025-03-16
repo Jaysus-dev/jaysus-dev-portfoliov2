@@ -2,7 +2,7 @@
   "typewriter": {
     "words": [
       "UI/UX Enthusiast",
-      "Front-end Web Developer",
+      "Front-end Developer",
       "Junior Web Developer",
       "Full Stack Developer II"
     ],
@@ -15,19 +15,19 @@
     {
       "className": "aside__link ",
       "icon": "IoPersonOutline",
-      "title": "<Profile />",
+      "title": "Profile ",
       "to": "/profile"
     },
     {
       "className": "aside__link ",
       "icon": "HiOutlineBriefcase",
-      "title": "<Expertise />",
+      "title": "Expertise ",
       "to": "/expertise"
     },
     {
       "className": "aside__link ",
       "icon": "PiImageLight",
-      "title": "<Portfolio />",
+      "title": "Portfolio ",
       "to": "/portfolio"
     }
   ],
@@ -172,7 +172,7 @@
     {
       "id": "work",
       "title": "B3S Telecommunications Inc.",
-      "image": "src/assets/img/BDI_Logo.png",
+      "image": "src/assets/img/B3S_Logo.png",
       "date": "Feb — Aug 2022",
       "subtitle": "Internship • Web Developer",
       "desc": "Gained hands-on experience in building and maintaining websites, collaborating with teams, and solving real-world coding challenges.",

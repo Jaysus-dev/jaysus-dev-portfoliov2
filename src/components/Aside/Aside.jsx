@@ -14,7 +14,7 @@ function Aside() {
           <div className="aside__online">
             <p className="aside__stat">
               <RiRadioButtonLine className="aside__ping" />
-              Available For Hire
+              Took Job Offer
             </p>
           </div>
           <div className="aside__content">

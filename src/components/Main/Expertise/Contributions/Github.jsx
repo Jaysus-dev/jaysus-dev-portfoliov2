@@ -3,10 +3,13 @@ import GitHubCalendar from "react-github-calendar";
 import "./Github.css";
 import axios from "axios";
 
-const GithubContributions = ({ username }) => {
+const Github = () => {
+  const username = import.meta.env.VITE_APP_USERNAME;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [recentContributions, setRecentContributions] = useState([]);
+
+  console.log(username); // Output: jaysus-dev
 
   // Function to calculate time since contribution
   const getTimeSince = (date) => {
@@ -14,7 +17,7 @@ const GithubContributions = ({ username }) => {
     const diffInSeconds = Math.floor((now - date) / 1000);
 
     if (diffInSeconds < 60) {
-      return `${diffInSeconds} seconds ago`;
+      return `${diffInSeconds}s ago`;
     } else if (diffInSeconds < 3600) {
       const minutes = Math.floor(diffInSeconds / 60);
       return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
@@ -74,65 +77,66 @@ const GithubContributions = ({ username }) => {
   }
 
   return (
-    <div className="git section grid">
-      <div className="gitcalendar__container">
-        <div className="gitcalendar__wrapper ">
-          <div className="gitcalendar__header">
-            <h3 className="section-title">GitHub Contributions</h3>
+    <section className="git section__margin ">
+      <h2 className="section__title">GitHub.</h2>
+      <span className="section__subtitle">Recent Contributions</span>
+      <div className="gitcalendar grid">
+        <div className="gitcalendar__container ">
+          <div className="gitcalendar__wrapper ">
+            <GitHubCalendar
+              username={username}
+              color="hsl(120, 100%, 50%)" // Custom color
+              colorScheme="dark" // dark theme
+              blockSize={10} // Size of each block
+              blockMargin={4} // Margin between blocks
+              fontSize={12} // Font size for labels
+              showWeekdayLabels={true} // Show weekday labels
+              showMonthLabels={true} // Show month labels
+              year={2025} // Show the this year
+              transformData={(data) => data} // Custom transform function
+              style={{
+                border: ".1px solid #ccc",
+                borderRadius: "8px",
+                padding: "16px",
+              }}
+            />
           </div>
-          <GitHubCalendar
-            username={username}
-            color="hsl(120, 100%, 50%)" // Custom color
-            colorScheme="dark" // dark theme
-            blockSize={10} // Size of each block
-            blockMargin={4} // Margin between blocks
-            fontSize={12} // Font size for labels
-            showWeekdayLabels={true} // Show weekday labels
-            showMonthLabels={true} // Show month labels
-            year={2025} // Show the last year
-            transformData={(data) => data} // Custom transform function
-            style={{
-              border: ".1px solid #ccc",
-              borderRadius: "8px",
-              padding: "16px",
-            }}
-          />
+        </div>
+        <div className="contributions__top grid">
+          <div className="contributions__header">
+            <h3>Contribution Activity</h3>
+            <span>
+              <i>note: this is a new github </i>
+            </span>
+          </div>
+          <div className="contributions__bottom">
+            {recentContributions.length > 0 ? (
+              <ul>
+                {recentContributions.map((contribution, index) => (
+                  <div className="contributions__container grid" key={index}>
+                    <div className="contributions__wrapper ">
+                      <li>{contribution.repo}</li>
+                      <li>{getTimeSince(contribution.date)}</li>{" "}
+                      {/* Display time since contribution */}
+                    </div>
+                    <div className="recent">
+                      {" "}
+                      {contribution.type === "PushEvent"
+                        ? "Commit"
+                        : "Pull Request"}
+                      : {contribution.message}
+                    </div>
+                  </div>
+                ))}
+              </ul>
+            ) : (
+              <p>No recent contributions found.</p>
+            )}
+          </div>
         </div>
       </div>
-      <div className="contributions__top grid">
-        <div className="contributions__header">
-          <h3>Contribution Activity</h3>
-          <span>
-            <i>note: this is a new github </i>
-          </span>
-        </div>
-        <div className="contributions__bottom">
-          {recentContributions.length > 0 ? (
-            <ul>
-              {recentContributions.map((contribution, index) => (
-                <div className="contributions__container grid" key={index}>
-                  <div className="contributions__wrapper ">
-                    <li>{contribution.repo}</li>
-                    <li>{getTimeSince(contribution.date)}</li>{" "}
-                    {/* Display time since contribution */}
-                  </div>
-                  <div className="recent">
-                    {" "}
-                    {contribution.type === "PushEvent"
-                      ? "Commit"
-                      : "Pull Request"}
-                    : {contribution.message}
-                  </div>
-                </div>
-              ))}
-            </ul>
-          ) : (
-            <p>No recent contributions found.</p>
-          )}
-        </div>
-      </div>
-    </div>
+    </section>
   );
 };
 
-export default GithubContributions;
+export default Github;

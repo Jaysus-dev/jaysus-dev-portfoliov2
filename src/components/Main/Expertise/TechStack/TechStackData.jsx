@@ -11,6 +11,7 @@ import {
   FaWordpress,
   FaSass,
   FaVuejs,
+  FaLaravel,
 } from "react-icons/fa";
 import {
   SiMysql,
@@ -18,7 +19,7 @@ import {
   SiTailwindcss,
   SiPhpmyadmin,
 } from "react-icons/si";
-import { TbSql, TbBrandReactNative } from "react-icons/tb";
+import { TbBrandReactNative, TbBrandFramerMotion } from "react-icons/tb";
 import { BsGit } from "react-icons/bs";
 import { VscVscodeInsiders } from "react-icons/vsc";
 import { IoLogoVercel } from "react-icons/io5";
@@ -39,7 +40,7 @@ const tools = [
     ],
   },
   {
-    id: "frontend",
+    id: "framework",
     title: "Libraries & Frameworks",
     data: [
       { name: "React", icon: <FaReact /> },
@@ -48,6 +49,8 @@ const tools = [
       { name: "Vue.js", icon: <FaVuejs /> },
       { name: "TailwindCSS", icon: <SiTailwindcss /> },
       { name: "Sass", icon: <FaSass /> },
+      { name: "Laravel", icon: <FaLaravel /> },
+      { name: "Framer Motion", icon: <TbBrandFramerMotion /> },
     ],
   },
   {

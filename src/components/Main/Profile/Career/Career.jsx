@@ -3,7 +3,7 @@ import "./Career.css";
 import Data from "../../../../assets/json/Data.json";
 function Career() {
   return (
-    <section className="career section">
+    <section className="career ">
       <h2 className="section__title">Career Path.</h2>
       <span className="section__subtitle">Evolving every step of the way</span>
       <div className="career__container grid">

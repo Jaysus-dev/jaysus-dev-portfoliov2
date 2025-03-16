@@ -67,3 +67,16 @@
   font-size: var(--tiny-font-size);
   color: var(--desc-color);
 }
+
+@media screen and (max-width: 1024px) {
+  .gitcalendar__wrapper {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .gitcalendar__wrapper {
+    width: 100%;
+    max-width: 330px;
+  }
+}
