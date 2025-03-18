@@ -9,8 +9,6 @@ const Github = () => {
   const [error, setError] = useState(null);
   const [recentContributions, setRecentContributions] = useState([]);
 
-  console.log(username); // Output: jaysus-dev
-
   // Function to calculate time since contribution
   const getTimeSince = (date) => {
     const now = new Date();

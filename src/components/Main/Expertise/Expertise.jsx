@@ -1,14 +1,14 @@
 import React from "react";
-import TechStack from "../Expertise/Techstack/TechStack.jsx";
-import Github from "../Expertise/Contributions/Github.jsx";
-import Courses from "../Expertise/CoursesCert/Courses.jsx";
+import TechStack from "./TechStack/TechStack";
+import Github from "./Contributions/Github";
+import Cert from "./CoursesCert/Courses";
 
 function Expertise() {
   return (
     <>
       <TechStack />
       <Github />
-      <Courses />
+      <Cert />
     </>
   );
 }
