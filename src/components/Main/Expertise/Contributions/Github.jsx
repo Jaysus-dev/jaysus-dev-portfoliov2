@@ -5,6 +5,7 @@ import axios from "axios";
 
 const Github = () => {
   const username = import.meta.env.VITE_APP_USERNAME;
+  const token = import.meta.env.VITE_APP_GITHUB_TOKEN;
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [recentContributions, setRecentContributions] = useState([]);
@@ -33,16 +34,22 @@ const Github = () => {
     const fetchContributions = async () => {
       try {
         // Fetch GitHub events
-        const eventsResponse = await axios.get(
-          `https://api.github.com/users/${username}/events`
-        );
 
+        const eventsResponse = await axios.get(
+          `https://api.github.com/users/${username}/events`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         // Filter and map the events to get recent contributions
         const contributions = eventsResponse.data
           .filter(
             (event) =>
               event.type === "PushEvent" || event.type === "PullRequestEvent"
           )
+
           .slice(0, 2) // Get the last 2 contributions
           .map((event) => ({
             type: event.type,
@@ -52,6 +59,7 @@ const Github = () => {
               ? event.payload.commits[0].message
               : event.payload.pull_request.title,
           }));
+        console.log("Filtered Contributions:", contributions);
 
         setRecentContributions(contributions);
       } catch (err) {

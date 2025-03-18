@@ -17,7 +17,7 @@ import Tailwindcss from "../../../../assets/img/Tailwind CSS.png";
 import Vercel from "../../../../assets/img/Vercel.png";
 import VScode from "../../../../assets/img/Visual Studio Code.png";
 import Vite from "../../../../assets/img/Vite.js.png";
-import Wordpress from "../../../../assets/img/Wordpress.png";
+import Wordpress from "../../../../assets/img/WordPress.png";
 import PS from "../../../../assets/img/Adobe Photoshop.png";
 
 const images = [
