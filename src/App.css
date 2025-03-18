@@ -212,6 +212,9 @@ textarea {
     grid-template-columns: repeat(1, 2fr);
     gap: 0rem;
   }
+  .main-content {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -219,10 +222,6 @@ textarea {
 
 /*SM-Device*/
 @media screen and (max-width: 425px) {
-  :root {
-    --big-font-size: 3.5rem;
-  }
-
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);

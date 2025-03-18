@@ -70,13 +70,21 @@
 
 @media screen and (max-width: 1024px) {
   .gitcalendar__wrapper {
-    width: 100%;
     max-width: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gitcalendar__wrapper {
+    max-width: 655px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .gitcalendar__wrapper {
+    max-width: 375px;
   }
 }
 @media screen and (max-width: 375px) {
   .gitcalendar__wrapper {
-    width: 100%;
     max-width: 330px;
   }
 }
