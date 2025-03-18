@@ -57,6 +57,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  height: 0;
+}
 
 body {
   color: var(--text-color);
@@ -212,8 +215,8 @@ textarea {
     grid-template-columns: repeat(1, 2fr);
     gap: 0rem;
   }
-  .main-content {
-    padding: 0;
+  .hide-aside .main-aside {
+    display: none;
   }
 }
 
