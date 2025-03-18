@@ -4,7 +4,7 @@ import Data from "../../../src/assets/json/Data.json";
 import { Link } from "react-router-dom";
 
 function AsideNav() {
-  const [activeNav, setActiveNav] = useState("/profile");
+  const [activeNav, setActiveNav] = useState("/expertise");
   return (
     <nav className="aside__list grid">
       <ul>

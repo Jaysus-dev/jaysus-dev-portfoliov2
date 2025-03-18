@@ -4,10 +4,10 @@
       "UI/UX Enthusiast",
       "Front-end Developer",
       "Junior Web Developer",
-      "Full Stack Developer II"
+      "Full-Stack Developer II"
     ],
-    "typeSpeed": 100,
-    "deleteSpeed": 40,
+    "typeSpeed": 70,
+    "deleteSpeed": 20,
     "loop": true
   },
 
@@ -35,11 +35,11 @@
   "socials": [
     {
       "icon": "FaFacebookSquare",
-      "link": "https://www.facebook.com/the2nddd"
+      "link": "https://www.facebook.com/jaysus.dev"
     },
     {
       "icon": "RiInstagramFill",
-      "link": "https://www.instagram.com/aintjaysus/"
+      "link": "https://www.instagram.com/jaysus.dev/"
     },
     {
       "icon": "FaLinkedin",

@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-      <div className="main-container  container grid">
+      <div className="main-container container grid">
         <aside className="main-aside grid" id="aside">
           <AsideNav />
         </aside>

@@ -7,7 +7,7 @@ import dotGit from "../../../../assets/img/Git.png";
 import Github from "../../../../assets/img/GitHub.png";
 import Gitlab from "../../../../assets/img/GitLab.png";
 import HTML from "../../../../assets/img/HTML5.png";
-import JS from "../../../../assets/img/Javascript.png";
+import JS from "../../../../assets/img/JavaScript.png";
 import NodeJs from "../../../../assets/img/Node.js.png";
 import NPM from "../../../../assets/img/NPM.png";
 import PHP from "../../../../assets/img/PHP.png";

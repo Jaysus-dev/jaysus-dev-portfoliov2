@@ -8,7 +8,7 @@ function TechStack() {
     <section className="techstack section__margin">
       <h2 className="section__title">TechStack.</h2>
       <span className="section__subtitle">
-        modern tech for seamless performance
+        Modern tech for seamless performance
       </span>
       <div className="techstack__container grid">
         <IconCloudDemo />
