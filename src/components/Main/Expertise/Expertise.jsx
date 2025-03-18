@@ -1,5 +1,5 @@
 import React from "react";
-import TechStack from "./Techstack/TechStack.jsx";
+import TechStack from "../Expertise/Techstack/TechStack.jsx";
 import Github from "./Contributions/Github";
 import Courses from "./CoursesCert/Courses.jsx";
 
