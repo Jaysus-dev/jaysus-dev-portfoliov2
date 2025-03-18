@@ -59,7 +59,6 @@ const Github = () => {
               ? event.payload.commits[0].message
               : event.payload.pull_request.title,
           }));
-        console.log("Filtered Contributions:", contributions);
 
         setRecentContributions(contributions);
       } catch (err) {
