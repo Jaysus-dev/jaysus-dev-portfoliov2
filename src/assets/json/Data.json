@@ -134,6 +134,7 @@
         { "name": "TailwindCSS" },
         { "name": "PHP" },
         { "name": "Laravel" },
+        { "name": "Docker" },
         { "name": "GitLab" }
       ]
     },
