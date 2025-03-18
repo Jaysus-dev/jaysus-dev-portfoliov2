@@ -44,30 +44,34 @@ const Github = () => {
           }
         );
         // Filter and map the events to get recent contributions
-        const contributions = eventsResponse.data
+        const contributions = response.data
           .filter(
             (event) =>
               event.type === "PushEvent" || event.type === "PullRequestEvent"
           )
-
-          .slice(0, 2) // Get the last 2 contributions
+          .sort((a, b) => new Date(b.created_at) - new Date(a.created_at)) // Sort by most recent
+          .slice(0, 2) // Get last 2 contributions
           .map((event) => ({
             type: event.type,
-            repo: event.repo.name.split("/")[1], // Extract only the repository name
-            date: new Date(event.created_at), // Store the contribution date
+            repo: event.repo.name.split("/")[1], // Extract repo name
+            date: new Date(event.created_at),
             message: event.payload.commits
-              ? event.payload.commits[0].message
-              : event.payload.pull_request.title,
+              ? event.payload.commits[0]?.message || "No message"
+              : event.payload.pull_request?.title || "No message",
           }));
 
-        setRecentContributions(contributions);
+        // Only update if the new data is different
+        if (
+          JSON.stringify(recentContributions) !== JSON.stringify(contributions)
+        ) {
+          setRecentContributions(contributions);
+        }
       } catch (err) {
         setError(err.message);
       } finally {
         setLoading(false);
       }
     };
-
     fetchContributions();
     const interval = setInterval(fetchContributions, 30000); // Refresh every 30s
     return () => clearInterval(interval);
