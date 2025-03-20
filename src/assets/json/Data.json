@@ -199,5 +199,24 @@
       "desc": "Crafted unique and impactful designs, from logos to digital illustrations.",
       "tech": [{ "name": "Photoshop" }, { "name": "Illustrator" }]
     }
+  ],
+
+  "certificates": [
+    {
+      "id": 1,
+      "img": "/img/CERT_Sample.jpg",
+      "title": "[Master Class] Deep Dive into React 18 + Typescript ",
+      "subtitle": "Udemy",
+      "issue": "Issued Feb 2024",
+      "cred": "Lorem ipsum"
+    },
+    {
+      "id": 2,
+      "img": "/img/CERT_Sample.jpg",
+      "title": "The Ultimate React ",
+      "subtitle": "Udemy",
+      "issue": "Issued Feb 2024",
+      "cred": "Lorem ipsum"
+    }
   ]
 }

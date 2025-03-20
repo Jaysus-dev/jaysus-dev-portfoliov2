@@ -7,21 +7,23 @@
     <title>Jay Estoquia</title>
   </head>
 
-  <body id="radial-gradient-overlay">
-    <div id="root">
-      <script>
-        const gradientOverlay = document.getElementById(
-          "radial-gradient-overlay"
-        );
+  <body>
+    <div id="radial-gradient-overlay">
+      <div id="root">
+        <script>
+          const gradientOverlay = document.getElementById(
+            "radial-gradient-overlay"
+          );
 
-        document.addEventListener("mousemove", (e) => {
-          gradientOverlay.style.backgroundImage = `radial-gradient(
+          document.addEventListener("mousemove", (e) => {
+            gradientOverlay.style.backgroundImage = `radial-gradient(
             600px at ${e.pageX}px ${e.pageY}px,
-             rgba( 126, 129, 132, 0.15),
+            rgba( 126, 129, 132, 0.15),
             transparent 80%
           )`;
-        });
-      </script>
+          });
+        </script>
+      </div>
     </div>
 
     <script type="module" src="/src/main.jsx"></script>

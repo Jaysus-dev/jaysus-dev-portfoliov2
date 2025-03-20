@@ -63,6 +63,10 @@
   font-size: var(--smaller-font-size);
 }
 
+.contributions__top {
+  gap: 0.1rem;
+}
+
 .recent {
   font-size: var(--tiny-font-size);
   color: var(--desc-color);

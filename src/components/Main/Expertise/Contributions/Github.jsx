@@ -111,7 +111,7 @@ const Github = () => {
             />
           </div>
         </div>
-        <div className="contributions__top grid">
+        <div className="contributions__top">
           <div className="contributions__header">
             <h3>Contribution Activity</h3>
             <span>
