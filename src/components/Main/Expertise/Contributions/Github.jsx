@@ -1,89 +1,87 @@
 import React, { useState, useEffect } from "react";
-import GitHubCalendar from "react-github-calendar"; // Import GitHub calendar component
-import "./Github.css"; // Import CSS for styling
-import axios from "axios"; // Import axios for making HTTP requests
+import GitHubCalendar from "react-github-calendar";
+
+import "./Github.css";
+import axios from "axios";
 
 const Github = () => {
-  // Fetch GitHub username and token from environment variables
   const username = import.meta.env.VITE_APP_USERNAME;
   const token = import.meta.env.VITE_APP_GITHUB_TOKEN;
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [recentContributions, setRecentContributions] = useState([]);
 
-  // State variables for loading, error, and recent contributions
-  const [loading, setLoading] = useState(true); // Tracks if data is being fetched
-  const [error, setError] = useState(null); // Stores any error that occurs
-  const [recentContributions, setRecentContributions] = useState([]); // Stores recent contributions
-
-  // If username or token is missing, show an error message
-  if (!username || !token) {
-    return <p>Error: GitHub username or token is missing.</p>;
-  }
-
-  // Function to calculate how much time has passed since a given date
   const getTimeSince = (date) => {
-    const now = new Date(); // Get the current date and time
-    const diffInSeconds = Math.floor((now - date) / 1000); // Calculate difference in seconds
+    const now = new Date();
+    const diffInSeconds = Math.floor((now - date) / 1000);
 
-    // Convert the difference into a human-readable format
     if (diffInSeconds < 60) {
-      return `${diffInSeconds}s ago`; // Less than 1 minute
+      return `${diffInSeconds}s ago`;
     } else if (diffInSeconds < 3600) {
-      const minutes = Math.floor(diffInSeconds / 60); // Less than 1 hour
+      const minutes = Math.floor(diffInSeconds / 60);
       return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
     } else if (diffInSeconds < 86400) {
-      const hours = Math.floor(diffInSeconds / 3600); // Less than 1 day
+      const hours = Math.floor(diffInSeconds / 3600);
       return `${hours} hour${hours > 1 ? "s" : ""} ago`;
     } else {
-      const days = Math.floor(diffInSeconds / 86400); // More than 1 day
+      const days = Math.floor(diffInSeconds / 86400);
       return `${days} day${days > 1 ? "s" : ""} ago`;
     }
   };
 
-  // useEffect hook to fetch recent contributions when the component mounts
   useEffect(() => {
     const fetchContributions = async () => {
+      console.log(
+        "Fetching contributions at:",
+        new Date().toLocaleTimeString()
+      );
       try {
-        // Fetch GitHub events for the user
         const eventsResponse = await axios.get(
-          `https://api.github.com/users/${username}/events?timestamp=${new Date().getTime()}`,
+          `https://api.github.com/users/${username}/events`,
           {
             headers: {
-              Authorization: `Bearer ${token}`, // Authenticate with GitHub token
+              Authorization: `Bearer ${token}`,
             },
           }
         );
+        console.log("Raw API Data:", eventsResponse.data);
 
-        // Filter and map the events to get recent contributions
         const contributions = eventsResponse.data
           .filter(
             (event) =>
-              event.type === "PushEvent" || event.type === "PullRequestEvent" // Only include Push and Pull Request events
+              event.type === "PushEvent" || event.type === "PullRequestEvent"
           )
-          .slice(0, 2) // Limit to the last 2 contributions
+          .slice(0, 2)
           .map((event) => ({
-            type: event.type, // Type of event (PushEvent or PullRequestEvent)
-            repo: event.repo.name.split("/")[1], // Extract repository name
-            date: new Date(event.created_at), // Convert event date to a Date object
+            type: event.type,
+            repo: event.repo.name.split("/")[1],
+            date: new Date(event.created_at).toLocaleDateString(),
             message: event.payload.commits
-              ? event.payload.commits[0].message // Use commit message for PushEvent
-              : event.payload.pull_request.title, // Use PR title for PullRequestEvent
+              ? event.payload.commits[0].message
+              : event.payload.pull_request.title,
           }));
 
-        // Update the state with the fetched contributions
+        console.log("Filtered Contributions:", contributions);
         setRecentContributions(contributions);
       } catch (err) {
-        // If an error occurs, set the error state
-        setError(err.message);
+        console.error("Error fetching GitHub contributions:", err);
+        if (err.response && err.response.status === 403) {
+          setError("Rate limit exceeded. Please try again later.");
+        } else {
+          setError(err.message);
+        }
       } finally {
-        // Set loading to false once the fetch is complete
         setLoading(false);
       }
     };
 
-    // Call the fetchContributions function
     fetchContributions();
-  }, [username, token]); // Re-run effect if username or token changes
 
-  // Render the component
+    // Set up polling to refetch data every 5 minutes
+    const interval = setInterval(fetchContributions, 5 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, [username, token]);
+
   return (
     <section className="git section__margin ">
       <h2 className="section__title">GitHub.</h2>
@@ -91,22 +89,21 @@ const Github = () => {
       <div className="gitcalendar grid">
         <div className="gitcalendar__container ">
           <div className="gitcalendar__wrapper ">
-            {/* GitHub Calendar Component */}
             <GitHubCalendar
-              username={username} // GitHub username
-              color="hsl(120, 100%, 50%)" // Custom color for the calendar
-              colorScheme="dark" // Use dark theme
-              blockSize={10} // Size of each calendar block
-              blockMargin={4} // Margin between blocks
-              fontSize={12} // Font size for labels
-              showWeekdayLabels={true} // Show weekday labels
-              showMonthLabels={true} // Show month labels
-              year={new Date().getFullYear()} // Display the current year
-              transformData={(data) => data} // Custom transform function (not used here)
+              username={username}
+              color="hsl(120, 100%, 50%)"
+              colorScheme="dark"
+              blockSize={10}
+              blockMargin={4}
+              fontSize={12}
+              showWeekdayLabels={true}
+              showMonthLabels={true}
+              year={new Date().getFullYear()}
+              transformData={(data) => data}
               style={{
-                border: ".1px solid #ccc", // Add a border
-                borderRadius: "8px", // Round the corners
-                padding: "16px", // Add padding
+                border: ".1px solid #ccc",
+                borderRadius: "8px",
+                padding: "16px",
               }}
             />
           </div>
@@ -119,29 +116,24 @@ const Github = () => {
             </span>
           </div>
           <div className="contributions__bottom">
-            {/* Display recent contributions if available */}
             {recentContributions.length > 0 ? (
               <ul>
                 {recentContributions.map((contribution, index) => (
                   <div className="contributions__container grid" key={index}>
-                    <div className="contributions__wrapper ">
-                      <li>{contribution.repo}</li> {/* Repository name */}
-                      <li>{getTimeSince(contribution.date)}</li>{" "}
-                      {/* Time since contribution */}
+                    <div className="contributions__wrapper">
+                      <li>{contribution.repo}</li>
+                      <li>{getTimeSince(contribution.date)}</li>
                     </div>
                     <div className="recent">
-                      {/* Display "Commit" or "Pull Request" based on event type */}
                       {contribution.type === "PushEvent"
                         ? "Commit"
                         : "Pull Request"}
-                      : {contribution.message}{" "}
-                      {/* Commit message or PR title */}
+                      : {contribution.message}
                     </div>
                   </div>
                 ))}
               </ul>
             ) : (
-              // Show a message if no contributions are found
               <p>No recent contributions found.</p>
             )}
           </div>
@@ -151,4 +143,4 @@ const Github = () => {
   );
 };
 
-export default Github; // Export the component
+export default Github;

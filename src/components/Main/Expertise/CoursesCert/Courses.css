@@ -17,6 +17,10 @@
   height: auto;
   cursor: pointer;
 }
+.course__data > img:hover {
+  filter: brightness(0.8); /* Darken the image */
+  transition: 0.2s ease-in-out;
+}
 
 .course__info {
   padding: 0.5rem;
@@ -27,8 +31,9 @@
 }
 
 .course__info > h3 {
-  font-size: var(--small-font-size);
   flex-grow: 2;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-0-25);
 }
 
 .course__info > span {

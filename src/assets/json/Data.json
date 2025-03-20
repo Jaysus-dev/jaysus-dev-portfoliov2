@@ -209,14 +209,6 @@
       "subtitle": "Udemy",
       "issue": "Issued Feb 2024",
       "cred": "Lorem ipsum"
-    },
-    {
-      "id": 2,
-      "img": "/img/CERT_Sample.jpg",
-      "title": "The Ultimate React ",
-      "subtitle": "Udemy",
-      "issue": "Issued Feb 2024",
-      "cred": "Lorem ipsum"
     }
   ]
 }
