@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
 import "./Github.css";
-import { index } from "d3";
 
 function Github() {
   const username = import.meta.env.VITE_APP_USERNAME;
@@ -26,11 +25,13 @@ function Github() {
 
   const fetchCommits = async () => {
     try {
+      // Fetch the most recently updated repositories
       const repoResponse = await fetch(
         `https://api.github.com/users/${username}/repos?sort=updated&per_page=2`
       );
       const repos = await repoResponse.json();
 
+      // Fetch the latest commit from each repository
       const commitData = await Promise.all(
         repos.map(async (repo) => {
           const commitResponse = await fetch(
@@ -48,7 +49,9 @@ function Github() {
         })
       );
 
-      setRecentCommits(commitData.filter(Boolean));
+      // Filter out null values and set the state
+      const filteredCommits = commitData.filter(Boolean);
+      setRecentCommits(filteredCommits);
     } catch (error) {
       console.error("Error fetching commits:", error);
     }
@@ -99,7 +102,7 @@ function Github() {
                     { repoName, commitMessage, commitDate, commitUrl },
                     index
                   ) => (
-                    <div className="contributions__container grid">
+                    <div key={index} className="contributions__container grid">
                       <div className="contributions__wrapper">
                         <li>{repoName}</li>
                         <li>{commitDate}</li>
