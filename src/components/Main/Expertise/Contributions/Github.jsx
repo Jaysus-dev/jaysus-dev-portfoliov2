@@ -1,86 +1,62 @@
 import React, { useState, useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
-
 import "./Github.css";
-import axios from "axios";
+import { index } from "d3";
 
-const Github = () => {
+function Github() {
   const username = import.meta.env.VITE_APP_USERNAME;
-  const token = import.meta.env.VITE_APP_GITHUB_TOKEN;
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [recentContributions, setRecentContributions] = useState([]);
+  const [recentCommits, setRecentCommits] = useState([]);
 
-  const getTimeSince = (date) => {
-    const now = new Date();
-    const diffInSeconds = Math.floor((now - date) / 1000);
+  const timeAgo = (date) => {
+    const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+    const intervals = [
+      ["years", 31536000],
+      ["months", 2592000],
+      ["days", 86400],
+      ["hours", 3600],
+      ["minutes", 60],
+    ];
 
-    if (diffInSeconds < 60) {
-      return `${diffInSeconds}s ago`;
-    } else if (diffInSeconds < 3600) {
-      const minutes = Math.floor(diffInSeconds / 60);
-      return `${minutes} minute${minutes > 1 ? "s" : ""} ago`;
-    } else if (diffInSeconds < 86400) {
-      const hours = Math.floor(diffInSeconds / 3600);
-      return `${hours} hour${hours > 1 ? "s" : ""} ago`;
-    } else {
-      const days = Math.floor(diffInSeconds / 86400);
-      return `${days} day${days > 1 ? "s" : ""} ago`;
+    for (const [label, sec] of intervals) {
+      const count = Math.floor(seconds / sec);
+      if (count >= 1) return `${count} ${label} ago`;
+    }
+    return "Just now";
+  };
+
+  const fetchCommits = async () => {
+    try {
+      const repoResponse = await fetch(
+        `https://api.github.com/users/${username}/repos?sort=updated&per_page=2`
+      );
+      const repos = await repoResponse.json();
+
+      const commitData = await Promise.all(
+        repos.map(async (repo) => {
+          const commitResponse = await fetch(
+            `https://api.github.com/repos/${username}/${repo.name}/commits`
+          );
+          const commits = await commitResponse.json();
+          return commits[0]
+            ? {
+                repoName: repo.name,
+                commitMessage: commits[0].commit.message,
+                commitDate: timeAgo(commits[0].commit.author.date),
+                commitUrl: commits[0].html_url,
+              }
+            : null;
+        })
+      );
+
+      setRecentCommits(commitData.filter(Boolean));
+    } catch (error) {
+      console.error("Error fetching commits:", error);
     }
   };
 
   useEffect(() => {
-    const fetchContributions = async () => {
-      console.log(
-        "Fetching contributions at:",
-        new Date().toLocaleTimeString()
-      );
-      try {
-        const eventsResponse = await axios.get(
-          `https://api.github.com/users/${username}/events`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-        console.log("Raw API Data:", eventsResponse.data);
-
-        const contributions = eventsResponse.data
-          .filter(
-            (event) =>
-              event.type === "PushEvent" || event.type === "PullRequestEvent"
-          )
-          .slice(0, 2)
-          .map((event) => ({
-            type: event.type,
-            repo: event.repo.name.split("/")[1],
-            date: new Date(event.created_at).toLocaleDateString(),
-            message: event.payload.commits
-              ? event.payload.commits[0].message
-              : event.payload.pull_request.title,
-          }));
-
-        console.log("Filtered Contributions:", contributions);
-        setRecentContributions(contributions);
-      } catch (err) {
-        console.error("Error fetching GitHub contributions:", err);
-        if (err.response && err.response.status === 403) {
-          setError("Rate limit exceeded. Please try again later.");
-        } else {
-          setError(err.message);
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchContributions();
-
-    // Set up polling to refetch data every 5 minutes
-    const interval = setInterval(fetchContributions, 5 * 60 * 1000);
-    return () => clearInterval(interval);
-  }, [username, token]);
+    fetchCommits();
+  }, []);
 
   return (
     <section className="git section__margin ">
@@ -116,31 +92,41 @@ const Github = () => {
             </span>
           </div>
           <div className="contributions__bottom">
-            {recentContributions.length > 0 ? (
-              <ul>
-                {recentContributions.map((contribution, index) => (
-                  <div className="contributions__container grid" key={index}>
-                    <div className="contributions__wrapper">
-                      <li>{contribution.repo}</li>
-                      <li>{getTimeSince(contribution.date)}</li>
+            <ul>
+              {recentCommits.length ? (
+                recentCommits.map(
+                  (
+                    { repoName, commitMessage, commitDate, commitUrl },
+                    index
+                  ) => (
+                    <div className="contributions__container grid">
+                      <div className="contributions__wrapper">
+                        <li>{repoName}</li>
+                        <li>{commitDate}</li>
+                      </div>
+                      <div className="recent">
+                        <li>
+                          <a
+                            href={commitUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {commitMessage}
+                          </a>
+                        </li>
+                      </div>
                     </div>
-                    <div className="recent">
-                      {contribution.type === "PushEvent"
-                        ? "Commit"
-                        : "Pull Request"}
-                      : {contribution.message}
-                    </div>
-                  </div>
-                ))}
-              </ul>
-            ) : (
-              <p>No recent contributions found.</p>
-            )}
+                  )
+                )
+              ) : (
+                <li>Loading recent commits...</li>
+              )}
+            </ul>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Github;
