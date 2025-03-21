@@ -63,6 +63,7 @@
   font-size: var(--smaller-font-size);
 }
 .contributions__wrapper > p {
+  font-size: var(--tiny-font-size);
   color: var(--desc-color);
 }
 

@@ -1,17 +1,11 @@
 import React from "react";
+import Projects from "./Projects/Projects";
 
 function Portfolio() {
   return (
-    <div className="section">
-      <div className="section">Portfolio</div>
-      <div className="section">Portfolio</div>
-      <div className="section">Portfolio</div>
-      <div className="section">Portfolio</div>
-      <div className="section">Portfolio</div>
-      <div className="section">Portfolio</div>
-      <div>Portfolio</div>
-      <div>Portfolio</div>
-    </div>
+    <>
+      <Projects />
+    </>
   );
 }
 

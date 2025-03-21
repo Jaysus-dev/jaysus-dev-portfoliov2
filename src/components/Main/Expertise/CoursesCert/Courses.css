@@ -78,11 +78,9 @@
   display: flex;
   max-width: 90%;
   max-height: 90%;
-  overflow: auto;
   background-color: white;
   padding: 1rem;
   border-radius: 0.5rem;
-  overflow: auto;
 }
 .modal__image {
   width: 100%;
@@ -94,14 +92,21 @@
 
 .modal__close {
   position: absolute;
-  top: -0.25rem;
-  right: 0.2rem;
-  background: transparent;
-
-  font-size: 1.5rem;
+  top: -12px; /* Adjust this value to move the button above the card */
+  right: -12px; /* Adjust this value to move the button outside the card */
+  width: 25px; /* Size of the circle */
+  height: 25px; /* Size of the circle */
+  background: var(--desc-color); /* Background color of the circle */
+  border-radius: 50%; /* Makes it a circle */
   cursor: pointer;
+  display: flex; /* Use flexbox to center the icon */
+  align-items: center; /* Vertically center the icon */
+  justify-content: center; /* Horizontally center the icon */
+  border: none; /* Remove default button border */
+  padding: 0; /* Remove default button padding */
+  font-size: 1.2rem; /* Adjust the size of the "X" icon */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
 }
-
 .modal__close:hover {
   color: var(--title-color);
 }
