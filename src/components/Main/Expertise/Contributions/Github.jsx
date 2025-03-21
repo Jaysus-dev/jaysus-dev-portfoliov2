@@ -1,70 +1,75 @@
 import React, { useState, useEffect } from "react";
 import GitHubCalendar from "react-github-calendar";
 import "./Github.css";
+import { count } from "d3";
 
 function Github() {
   const username = import.meta.env.VITE_APP_USERNAME;
   const [recentCommits, setRecentCommits] = useState([]);
 
-  // Helper function to calculate time ago
+  const pluralize = (count, singular, plural = `${singular}s`) =>
+    `${count} ${count === 1 ? singular : plural} `;
+
   const timeAgo = (date) => {
     const seconds = Math.floor((new Date() - new Date(date)) / 1000);
     const intervals = [
-      ["years", 31536000],
-      ["months", 2592000],
-      ["days", 86400],
-      ["hours", 3600],
-      ["minutes", 60],
+      ["year", 31536000],
+      ["month", 2592000],
+      ["day", 86400],
+      ["hour", 3600],
+      ["min", 60],
+      ["second", 1],
     ];
 
     for (const [label, sec] of intervals) {
       const count = Math.floor(seconds / sec);
-      if (count >= 1) return `${count} ${label} ago`;
+      if (count >= 1) {
+        return `${pluralize(count, label)} ago`;
+      }
     }
     return "Just now";
   };
 
-  // Fetch all repositories for the user
-  const fetchRepositories = async () => {
-    const response = await fetch(
-      `https://api.github.com/users/${username}/repos`
-    );
-    return response.json();
-  };
-
-  // Fetch the latest commits for a given repository
-  const fetchCommitsForRepository = async (repo) => {
-    const response = await fetch(
-      `https://api.github.com/repos/${username}/${repo.name}/commits`
-    );
-    const commits = await response.json();
-    return commits.map((commit) => ({
-      repoName: repo.name,
-      commitMessage: commit.commit.message,
-      commitDate: commit.commit.author.date,
-      commitUrl: commit.html_url,
-    }));
-  };
-
-  // Fetch and process all commits
-  const fetchAllCommits = async () => {
+  const fetchCommits = async () => {
     try {
-      const repos = await fetchRepositories();
-      const commitData = await Promise.all(
-        repos.map((repo) => fetchCommitsForRepository(repo))
+      // Fetch all repositories
+      const repoResponse = await fetch(
+        `https://api.github.com/users/${username}/repos`
       );
+      const repos = await repoResponse.json();
+
+      // Fetch the latest commit from each repository
+      const commitData = await Promise.all(
+        repos.map(async (repo) => {
+          const commitResponse = await fetch(
+            `https://api.github.com/repos/${username}/${repo.name}/commits`
+          );
+          const commits = await commitResponse.json();
+          return commits.map((commit) => ({
+            repoName: repo.name,
+            commitMessage: commit.commit.message,
+            commitDate: commit.commit.author.date,
+            commitUrl: commit.html_url,
+          }));
+        })
+      );
+
+      // Flatten the array of commits and sort by date
       const allCommits = commitData.flat();
       allCommits.sort(
         (a, b) => new Date(b.commitDate) - new Date(a.commitDate)
       );
-      setRecentCommits(allCommits.slice(0, 2));
+
+      // Get the two most recent commits
+      const filteredCommits = allCommits.slice(0, 2);
+      setRecentCommits(filteredCommits);
     } catch (error) {
       console.error("Error fetching commits:", error);
     }
   };
 
   useEffect(() => {
-    fetchAllCommits();
+    fetchCommits();
   }, []);
 
   return (
