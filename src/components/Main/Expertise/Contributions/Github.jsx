@@ -6,6 +6,7 @@ function Github() {
   const username = import.meta.env.VITE_APP_USERNAME;
   const [recentCommits, setRecentCommits] = useState([]);
 
+  // Helper function to calculate time ago
   const timeAgo = (date) => {
     const seconds = Math.floor((new Date() - new Date(date)) / 1000);
     const intervals = [
@@ -23,42 +24,47 @@ function Github() {
     return "Just now";
   };
 
-  const fetchCommits = async () => {
+  // Fetch all repositories for the user
+  const fetchRepositories = async () => {
+    const response = await fetch(
+      `https://api.github.com/users/${username}/repos`
+    );
+    return response.json();
+  };
+
+  // Fetch the latest commits for a given repository
+  const fetchCommitsForRepository = async (repo) => {
+    const response = await fetch(
+      `https://api.github.com/repos/${username}/${repo.name}/commits`
+    );
+    const commits = await response.json();
+    return commits.map((commit) => ({
+      repoName: repo.name,
+      commitMessage: commit.commit.message,
+      commitDate: commit.commit.author.date,
+      commitUrl: commit.html_url,
+    }));
+  };
+
+  // Fetch and process all commits
+  const fetchAllCommits = async () => {
     try {
-      // Fetch the most recently updated repositories
-      const repoResponse = await fetch(
-        `https://api.github.com/users/${username}/repos?sort=updated&per_page=2`
-      );
-      const repos = await repoResponse.json();
-
-      // Fetch the latest commit from each repository
+      const repos = await fetchRepositories();
       const commitData = await Promise.all(
-        repos.map(async (repo) => {
-          const commitResponse = await fetch(
-            `https://api.github.com/repos/${username}/${repo.name}/commits`
-          );
-          const commits = await commitResponse.json();
-          return commits[0]
-            ? {
-                repoName: repo.name,
-                commitMessage: commits[0].commit.message,
-                commitDate: timeAgo(commits[0].commit.author.date),
-                commitUrl: commits[0].html_url,
-              }
-            : null;
-        })
+        repos.map((repo) => fetchCommitsForRepository(repo))
       );
-
-      // Filter out null values and set the state
-      const filteredCommits = commitData.filter(Boolean);
-      setRecentCommits(filteredCommits);
+      const allCommits = commitData.flat();
+      allCommits.sort(
+        (a, b) => new Date(b.commitDate) - new Date(a.commitDate)
+      );
+      setRecentCommits(allCommits.slice(0, 2));
     } catch (error) {
       console.error("Error fetching commits:", error);
     }
   };
 
   useEffect(() => {
-    fetchCommits();
+    fetchAllCommits();
   }, []);
 
   return (
@@ -95,36 +101,23 @@ function Github() {
             </span>
           </div>
           <div className="contributions__bottom">
-            <ul>
-              {recentCommits.length ? (
-                recentCommits.map(
-                  (
-                    { repoName, commitMessage, commitDate, commitUrl },
-                    index
-                  ) => (
-                    <div key={index} className="contributions__container grid">
-                      <div className="contributions__wrapper">
-                        <li>{repoName}</li>
-                        <li>{commitDate}</li>
-                      </div>
-                      <div className="recent">
-                        <li>
-                          <a
-                            href={commitUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {commitMessage}
-                          </a>
-                        </li>
-                      </div>
+            {recentCommits.length ? (
+              recentCommits.map(
+                ({ repoName, commitMessage, commitDate, commitUrl }, index) => (
+                  <div key={index} className="contributions__container grid">
+                    <div className="contributions__wrapper">
+                      <span>{repoName}</span>
+                      <p>{timeAgo(commitDate)}</p>
                     </div>
-                  )
+                    <div className="recent">
+                      <span>{commitMessage}</span>
+                    </div>
+                  </div>
                 )
-              ) : (
-                <li>Loading recent commits...</li>
-              )}
-            </ul>
+              )
+            ) : (
+              <li>Loading recent commits...</li>
+            )}
           </div>
         </div>
       </div>
