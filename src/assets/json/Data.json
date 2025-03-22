@@ -210,5 +210,31 @@
       "issue": "Issued Feb 2024",
       "cred": "Lorem ipsum"
     }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "img": "https://cdn.magicui.design/bento-grid.mp4",
+      "title": "[Master Class]  ",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },
+    {
+      "id": 2,
+      "img": "https://cdn.magicui.design/bento-grid.mp4",
+      "title": "[Master Class]",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    }
   ]
 }

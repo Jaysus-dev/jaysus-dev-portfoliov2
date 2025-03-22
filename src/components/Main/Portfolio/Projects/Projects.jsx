@@ -1,4 +1,6 @@
 import React from "react";
+import "./Projects.css";
+import Data from "../../../../assets/json/Data.json";
 
 function Projects() {
   return (
@@ -8,16 +10,28 @@ function Projects() {
       <div className="project__container">
         <div className="project__wrapper">
           <div className="project__content grid">
-            <div className="project__data">
-              data
-              <img src="" alt="" />
-              <div className="project__info">
-                <h3>title</h3>
-                <span>subtitle</span>
-                <p>desc</p>
-                <p>stack</p>
+            {Data.projects.map((proj) => (
+              <div key={proj.id} className="project__data">
+                <video
+                  src={proj.img}
+                  className="project__video"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                ></video>
+                <div className="project__info">
+                  <h3>{proj.title}</h3>
+                  <span>{proj.subtitle}</span>
+                  <p>{proj.desc}</p>
+                  <div className="project__stack">
+                    {proj.stack?.map((stack, stackIndex) => (
+                      <p key={stackIndex}>{stack.name}</p>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

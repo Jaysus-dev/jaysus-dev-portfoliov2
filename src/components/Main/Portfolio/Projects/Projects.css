@@ -1,0 +1,49 @@
+.project__content {
+  grid-template-columns: repeat(2, 1fr);
+}
+.project__data {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px var(--text-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.project__data > video {
+  width: 100%;
+}
+.project__data > video:hover {
+  filter: brightness(0.8);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.project__info {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.project__info > h3 {
+  font-size: var(--small-font-size);
+}
+
+.project__info > span {
+  font-size: var(--smaller-font-size);
+}
+
+.project__info > p {
+  font-size: var(--tiny-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+.project__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.project__stack > p {
+  background-color: var(--title-color-dark);
+  border: solid 1px gray;
+  color: var(--text-color);
+  padding: 0.1rem 0.2rem;
+  font-size: var(--tin-font-size);
+  border-radius: 0.3rem;
+}
