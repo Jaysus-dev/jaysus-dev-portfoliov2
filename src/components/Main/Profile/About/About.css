@@ -51,6 +51,7 @@
   font-size: var(--normal-font-size);
   color: var(--desc-color);
   width: 100%;
+  margin-top: var(--mb-1-5);
   margin-bottom: var(--mb-2-5);
 }
 
