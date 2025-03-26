@@ -13,7 +13,7 @@ function Projects() {
             {Data.projects.map((proj) => (
               <div key={proj.id} className="project__data">
                 <video
-                  src={proj.img}
+                  src={proj.vid}
                   className="project__video"
                   autoPlay
                   loop

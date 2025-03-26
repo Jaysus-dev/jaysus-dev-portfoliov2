@@ -214,7 +214,19 @@
   "projects": [
     {
       "id": 1,
-      "img": "",
+      "vid": "/vid/Jay_Estoquia.webm",
+      "title": "Jay Estoquia",
+      "subtitle": "Personal",
+      "desc": "Made brand website and developed e-commerce page in their website",
+      "stack": [
+        { "name": "Vite+React.JS" },
+        { "name": "TailwindCSS" },
+        { "name": "PHP" }
+      ]
+    },
+    {
+      "id": 2,
+      "vid": "/vid/BDI_Capital.webm",
       "title": "BDI Capital Ltd.",
       "subtitle": "Consultancy",
       "desc": "Made brand website and developed e-commerce page in their website",
@@ -222,15 +234,14 @@
         { "name": "Vite+React.JS" },
         { "name": "TailwindCSS" },
         { "name": "PHP" }
-        
       ]
     }
   ],
-  "collabproj" : [
+  "collabproj": [
     {
       "id": 1,
-      "img": "",
-      "url" : "",
+      "vid": "/vid/Figment_Clique.webm",
+      "url": "",
       "title": "Figment Clique",
       "subtitle": "Lorem Ipsum",
       "desc": "Lorem Ipsum",
@@ -242,8 +253,8 @@
     },
     {
       "id": 2,
-      "img": "",
-      "url" : "",
+      "vid": "/vid/Car_2_Go.webm",
+      "url": "",
       "title": "Car 2 Go Ph",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
@@ -255,8 +266,8 @@
     },
     {
       "id": 3,
-      "img": "",
-      "url" : "",
+      "vid": "/vid/Asta_ToDo.webm",
+      "url": "",
       "title": "Asta Task App",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
@@ -265,11 +276,11 @@
         { "name": "CSS3" },
         { "name": "JavaScript" }
       ]
-    },   
+    },
     {
       "id": 4,
-      "img": "",
-      "url" : "",
+      "vid": "/vid/Cloud_Chase.webm",
+      "url": "",
       "title": "Cloud Chase",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
@@ -281,8 +292,8 @@
     },
     {
       "id": 5,
-      "img": "",
-      "url" : "",
+      "vid": "/vid/Triple7_Tatou.webm",
+      "url": "",
       "title": "Triple 7 Tatou",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
@@ -294,8 +305,8 @@
     },
     {
       "id": 6,
-      "img": "",
-      "url" : "",
+      "vid": "/vid/iLead_ICT.webm",
+      "url": "",
       "title": "ILead ICT Solutions",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
@@ -307,8 +318,8 @@
     },
     {
       "id": 7,
-      "img": "",
-      "url" : "",
+      "vid": "/vid/Intelco_Fiber.webm",
+      "url": "",
       "title": "Intelco Fiber",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
@@ -320,8 +331,8 @@
     },
     {
       "id": 7,
-      "img": "",
-      "url" : "",
+      "vid": "/vid/ImTech_Solutions.webm",
+      "url": "",
       "title": "ImTech Solutions",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
