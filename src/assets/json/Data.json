@@ -214,27 +214,15 @@
   "projects": [
     {
       "id": 1,
-      "img": "/vid/BDI_Web.mkv",
+      "img": "",
       "title": "BDI Capital Ltd.",
-      "subtitle": "Udemy",
+      "subtitle": "Consultancy",
       "desc": "Made brand website and developed e-commerce page in their website",
       "stack": [
         { "name": "Vite+React.JS" },
         { "name": "TailwindCSS" },
         { "name": "PHP" }
         
-      ]
-    },
-    {
-      "id": 2,
-      "img": "",
-      "title": "[Master Class]",
-      "subtitle": "Udemy",
-      "desc": "Issued Feb 2024",
-      "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
       ]
     }
   ],
@@ -243,7 +231,7 @@
       "id": 1,
       "img": "",
       "url" : "",
-      "title": "BDI Capital Ltd.",
+      "title": "Figment Clique",
       "subtitle": "Lorem Ipsum",
       "desc": "Lorem Ipsum",
       "stack": [
@@ -256,7 +244,85 @@
       "id": 2,
       "img": "",
       "url" : "",
-      "title": "[Master Class]  ",
+      "title": "Car 2 Go Ph",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },
+    {
+      "id": 3,
+      "img": "",
+      "url" : "",
+      "title": "Asta Task App",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },   
+    {
+      "id": 4,
+      "img": "",
+      "url" : "",
+      "title": "Cloud Chase",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },
+    {
+      "id": 5,
+      "img": "",
+      "url" : "",
+      "title": "Triple 7 Tatou",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },
+    {
+      "id": 6,
+      "img": "",
+      "url" : "",
+      "title": "ILead ICT Solutions",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },
+    {
+      "id": 7,
+      "img": "",
+      "url" : "",
+      "title": "Intelco Fiber",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },
+    {
+      "id": 7,
+      "img": "",
+      "url" : "",
+      "title": "ImTech Solutions",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
       "stack": [
