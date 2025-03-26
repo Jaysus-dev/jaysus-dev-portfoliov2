@@ -10,10 +10,10 @@ function CollabProj() {
         <div className="project__container">
           <div className="project__wrapper">
             <div className="project__content grid">
-              {Data.projects.map((proj) => (
-                <div key={proj.id} className="project__data">
+              {Data.collabproj.map((colproj) => (
+                <div key={colproj.id} className="project__data">
                   <video
-                    src={proj.img}
+                    src={colproj.img}
                     className="project__video"
                     autoPlay
                     loop
@@ -21,11 +21,11 @@ function CollabProj() {
                     playsInline
                   ></video>
                   <div className="project__info">
-                    <h3>{proj.title}</h3>
-                    <span>{proj.subtitle}</span>
-                    <p>{proj.desc}</p>
+                    <h3>{colproj.title}</h3>
+                    <span>{colproj.subtitle}</span>
+                    <p>{colproj.desc}</p>
                     <div className="project__stack">
-                      {proj.stack?.map((stack, stackIndex) => (
+                      {colproj.stack?.map((stack, stackIndex) => (
                         <p key={stackIndex}>{stack.name}</p>
                       ))}
                     </div>

@@ -214,19 +214,20 @@
   "projects": [
     {
       "id": 1,
-      "img": "https://cdn.magicui.design/bento-grid.mp4",
-      "title": "[Master Class]  ",
+      "img": "/vid/BDI_Web.mkv",
+      "title": "BDI Capital Ltd.",
       "subtitle": "Udemy",
-      "desc": "Issued Feb 2024",
+      "desc": "Made brand website and developed e-commerce page in their website",
       "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
+        { "name": "Vite+React.JS" },
+        { "name": "TailwindCSS" },
+        { "name": "PHP" }
+        
       ]
     },
     {
       "id": 2,
-      "img": "https://cdn.magicui.design/bento-grid.mp4",
+      "img": "",
       "title": "[Master Class]",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
@@ -240,11 +241,11 @@
   "collabproj" : [
     {
       "id": 1,
-      "img": "https://cdn.magicui.design/bento-grid.mp4",
+      "img": "",
       "url" : "",
-      "title": "[Master Class]  ",
-      "subtitle": "Udemy",
-      "desc": "Issued Feb 2024",
+      "title": "BDI Capital Ltd.",
+      "subtitle": "Lorem Ipsum",
+      "desc": "Lorem Ipsum",
       "stack": [
         { "name": "HTML5" },
         { "name": "CSS3" },
@@ -253,7 +254,7 @@
     },
     {
       "id": 2,
-      "img": "https://cdn.magicui.design/bento-grid.mp4",
+      "img": "",
       "url" : "",
       "title": "[Master Class]  ",
       "subtitle": "Udemy",
