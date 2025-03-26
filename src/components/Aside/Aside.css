@@ -31,7 +31,8 @@
 }
 .aside__ping {
   /*color: #00ff40;unemployed*/
-  color: rgb(255, 217, 0);
+  /*color: rgb(255, 217, 0); pending*/
+  color: rgb(252, 39, 39);
 
   animation: ping-large 1s infinite;
 }

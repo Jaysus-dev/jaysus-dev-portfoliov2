@@ -4,7 +4,7 @@ import Data from "../../../../assets/json/Data.json";
 
 function Projects() {
   return (
-    <div className="project">
+    <div className="project section__margin">
       <h2 className="section__title">Recent Work.</h2>
       <span className="section__subtitle">Recent & Selected Projects</span>
       <div className="project__container">

@@ -236,5 +236,33 @@
         { "name": "JavaScript" }
       ]
     }
+  ],
+  "collabproj" : [
+    {
+      "id": 1,
+      "img": "https://cdn.magicui.design/bento-grid.mp4",
+      "url" : "",
+      "title": "[Master Class]  ",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    },
+    {
+      "id": 2,
+      "img": "https://cdn.magicui.design/bento-grid.mp4",
+      "url" : "",
+      "title": "[Master Class]  ",
+      "subtitle": "Udemy",
+      "desc": "Issued Feb 2024",
+      "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" }
+      ]
+    }
   ]
 }
