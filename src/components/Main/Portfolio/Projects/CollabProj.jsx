@@ -6,7 +6,7 @@ function CollabProj() {
   return (
     <div className="project">
       <h2 className="section__title">Collaboration</h2>
-      <span className="section__subtitle">Recent & Selected Projects</span>
+      <span className="section__subtitle">Hack & Stack Projects</span>
       <div className="project__container">
         <div className="project__wrapper">
           <div className="project__content grid">
