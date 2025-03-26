@@ -5,7 +5,7 @@ import Data from "../../../../assets/json/Data.json";
 function CollabProj() {
   return (
     <div className="project">
-      <h2 className="section__title">Collab Proj.</h2>
+      <h2 className="section__title">Collaboration</h2>
       <span className="section__subtitle">Recent & Selected Projects</span>
       <div className="project__container">
         <div className="project__wrapper">
@@ -22,8 +22,6 @@ function CollabProj() {
                 ></video>
                 <div className="project__info">
                   <h3>{colproj.title}</h3>
-                  <span>{colproj.subtitle}</span>
-                  <p>{colproj.desc}</p>
                   <div className="project__stack">
                     {colproj.stack?.map((stack, stackIndex) => (
                       <p key={stackIndex}>{stack.name}</p>

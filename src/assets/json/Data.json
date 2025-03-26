@@ -215,13 +215,15 @@
     {
       "id": 1,
       "vid": "/vid/Jay_Estoquia.webm",
-      "title": "Jay Estoquia",
+      "title": "Jay Estoquia Web",
       "subtitle": "Personal",
-      "desc": "Made brand website and developed e-commerce page in their website",
+      "desc": "A creative showcase of my work, skills, and passion for web development. Explore my projects, dive into my tech stack, and let’s build something amazing together.",
       "stack": [
+        { "name": "HTML5" },
+        { "name": "CSS3" },
+        { "name": "JavaScript" },
         { "name": "Vite+React.JS" },
-        { "name": "TailwindCSS" },
-        { "name": "PHP" }
+        { "name": "Framer Motion" }
       ]
     },
     {
@@ -231,6 +233,8 @@
       "subtitle": "Consultancy",
       "desc": "Made brand website and developed e-commerce page in their website",
       "stack": [
+        { "name": "HTML5" },
+        { "name": "JavaScript" },
         { "name": "Vite+React.JS" },
         { "name": "TailwindCSS" },
         { "name": "PHP" }
@@ -246,9 +250,13 @@
       "subtitle": "Lorem Ipsum",
       "desc": "Lorem Ipsum",
       "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
+        { "name": "Next.js" },
+        { "name": "TailwindCSS" },
+        { "name": "Typescript" },
+        { "name": "Prisma" },
+        { "name": "Shadcn" },
+        { "name": "MongoDB" },
+        { "name": "Zustand" }
       ]
     },
     {
@@ -259,9 +267,12 @@
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
       "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
+        { "name": "Next.js" },
+        { "name": "TailwindCSS" },
+        { "name": "Typescript" },
+        { "name": "Firebase" },
+        { "name": "Shadcn" },
+        { "name": "Zustand" }
       ]
     },
     {
@@ -272,9 +283,9 @@
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
       "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
+        { "name": "Vite+React.JS" },
+        { "name": "MaterialTailwind" },
+        { "name": "Zustand" }
       ]
     },
     {
@@ -285,9 +296,9 @@
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
       "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
+        { "name": "Vite+React.JS" },
+        { "name": "MaterialTailwind" },
+        { "name": "ContextAPI" }
       ]
     },
     {
@@ -298,9 +309,10 @@
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
       "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
+        { "name": "Vite+React.JS" },
+        { "name": "TailwindCSS" },
+        { "name": "MaterialTailwind" },
+        { "name": "Firebase" }
       ]
     },
     {
@@ -310,11 +322,7 @@
       "title": "ILead ICT Solutions",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
-      "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
-      ]
+      "stack": [{ "name": "Wordpress" }, { "name": "Beaver Builder" }]
     },
     {
       "id": 7,
@@ -323,11 +331,7 @@
       "title": "Intelco Fiber",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
-      "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
-      ]
+      "stack": [{ "name": "Wordpress" }, { "name": "Beaver Builder" }]
     },
     {
       "id": 7,
@@ -336,11 +340,7 @@
       "title": "ImTech Solutions",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
-      "stack": [
-        { "name": "HTML5" },
-        { "name": "CSS3" },
-        { "name": "JavaScript" }
-      ]
+      "stack": [{ "name": "Wordpress" }, { "name": "Beaver Builder" }]
     }
   ]
 }

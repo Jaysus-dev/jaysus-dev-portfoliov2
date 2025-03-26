@@ -25,23 +25,25 @@
 }
 .project__info > h3 {
   font-size: var(--small-font-size);
+  margin-bottom: var(--mb-0-25);
 }
 
 .project__info > span {
   font-size: var(--smaller-font-size);
+  margin-bottom: var(--mb-0-25);
 }
 
 .project__info > p {
   font-size: var(--tiny-font-size);
-  margin-bottom: var(--mb-0-25);
+  margin-bottom: var(--mb-0-5);
   color: var(--desc-color);
   flex-grow: 2;
 }
 .project__stack {
   display: flex;
+
   flex-wrap: wrap;
   gap: 0.3rem;
-
 }
 .project__stack > p {
   background-color: var(--title-color-dark);
@@ -50,5 +52,4 @@
   padding: 0.1rem 0.2rem;
   font-size: var(--tin-font-size);
   border-radius: 0.3rem;
-
 }
