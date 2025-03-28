@@ -129,7 +129,8 @@
       "tech": [
         { "name": "HTML5" },
         { "name": "JavaScript" },
-        { "name": "Vue.JS" },
+        { "name": "Vue.js" },
+        { "name": "Inertia.js" },
         { "name": "CSS3" },
         { "name": "TailwindCSS" },
         { "name": "PHP" },
@@ -262,48 +263,6 @@
     },
     {
       "id": 2,
-      "vid": "/vid/Car_2_Go.webm",
-      "url": "",
-      "title": "Car 2 Go Ph",
-      "subtitle": "Udemy",
-      "desc": "Issued Feb 2024",
-      "stack": [
-        { "name": "Next.js" },
-        { "name": "TailwindCSS" },
-        { "name": "Typescript" },
-        { "name": "Firebase" },
-        { "name": "Shadcn" },
-        { "name": "Zustand" }
-      ]
-    },
-    {
-      "id": 3,
-      "vid": "/vid/Asta_ToDo.webm",
-      "url": "",
-      "title": "Asta Task App",
-      "subtitle": "Udemy",
-      "desc": "Issued Feb 2024",
-      "stack": [
-        { "name": "Vite+React.JS" },
-        { "name": "MaterialTailwind" },
-        { "name": "Zustand" }
-      ]
-    },
-    {
-      "id": 4,
-      "vid": "/vid/Cloud_Chase.webm",
-      "url": "",
-      "title": "Cloud Chase",
-      "subtitle": "Udemy",
-      "desc": "Issued Feb 2024",
-      "stack": [
-        { "name": "Vite+React.JS" },
-        { "name": "MaterialTailwind" },
-        { "name": "ContextAPI" }
-      ]
-    },
-    {
-      "id": 5,
       "vid": "/vid/Triple7_Tatou.webm",
       "url": "",
       "title": "Triple 7 Tatou",
@@ -315,33 +274,23 @@
         { "name": "MaterialTailwind" },
         { "name": "Firebase" }
       ]
-    },
-    {
-      "id": 6,
+    }, {
+      "id": 3,
       "vid": "/vid/iLead_ICT.webm",
       "url": "",
       "title": "ILead ICT Solutions",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
       "stack": [{ "name": "Wordpress" }, { "name": "Beaver Builder" }]
-    },
-    {
-      "id": 7,
+    },   {
+      "id": 4,
       "vid": "/vid/Intelco_Fiber.webm",
       "url": "",
       "title": "Intelco Fiber",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
       "stack": [{ "name": "Wordpress" }, { "name": "Beaver Builder" }]
-    },
-    {
-      "id": 7,
-      "vid": "/vid/ImTech_Solutions.webm",
-      "url": "",
-      "title": "ImTech Solutions",
-      "subtitle": "Udemy",
-      "desc": "Issued Feb 2024",
-      "stack": [{ "name": "Wordpress" }, { "name": "Beaver Builder" }]
     }
+
   ]
 }

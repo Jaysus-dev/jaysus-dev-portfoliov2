@@ -28,6 +28,7 @@
   margin-bottom: var(--mb-0-25);
 }
 
+
 .project__info > span {
   font-size: var(--smaller-font-size);
   margin-bottom: var(--mb-0-25);
@@ -41,7 +42,6 @@
 }
 .project__stack {
   display: flex;
-
   flex-wrap: wrap;
   gap: 0.3rem;
 }
@@ -52,4 +52,46 @@
   padding: 0.1rem 0.2rem;
   font-size: var(--tin-font-size);
   border-radius: 0.3rem;
+}
+.col__project__info{
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.col__project__info > h3 {
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-0-25);
+}
+
+.col__project__info > p {
+  font-size: var(--tiny-font-size);
+  margin-bottom: var(--mb-0-5);
+  color: var(--desc-color);
+}
+.project__links {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  place-self: end;
+  margin-top: var(--mb-1-5);
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  transition: color .2s ease-in-out;
+  color: var(--desc-color);
+}
+
+.project__links:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--title-color);
+}
+
+.project__links-icon {
+  font-size: var(--smaller-font-size);
+  transition: transform 0.2s ease-in-out;
+}
+
+.project__links:hover .project__links-icon {
+  transform: translateX(0.2rem); 
 }

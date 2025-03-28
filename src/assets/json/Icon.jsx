@@ -11,7 +11,8 @@ import { RiInstagramFill } from "react-icons/ri";
 import { PiImageLight } from "react-icons/pi";
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import { GrAchievement } from "react-icons/gr";
-import { LuCodeXml } from "react-icons/lu";
+import { LuArrowUpRight } from "react-icons/lu";
+
 
 export const iconComponents = {
   IoPersonOutline: IoPersonOutline,
@@ -25,4 +26,5 @@ export const iconComponents = {
   FaCode: FaCode,
   GrAchievement: GrAchievement,
   FaHeadset: FaHeadset,
+  LuArrowUpRight:LuArrowUpRight
 };
