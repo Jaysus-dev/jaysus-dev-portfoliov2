@@ -125,7 +125,7 @@
       "image": "/img/NCMH_Logo.jpg",
       "date": "Mar 2025 — Present",
       "subtitle": "Fullstack Developer II",
-      "desc": "Website development, graphic design, digital marketing, and AI transformation initiatives. Collaborate with internal teams and clients to create and maintain websites, design graphics, and drive AI transformation projects.",
+      "desc": "Designing and developing secure digital solutions to enhance mental healthcare services. Leading end-to-end application development from requirements analysis to deployment. Collaborating with cross-functional teams to implement system improvements and optimize service delivery workflows. Ensuring compliance with healthcare data regulations while maintaining high performance standards.",
       "tech": [
         { "name": "HTML5" },
         { "name": "JavaScript" },
@@ -224,6 +224,7 @@
         { "name": "CSS3" },
         { "name": "JavaScript" },
         { "name": "Vite+React.JS" },
+        { "name": "Magic UI" },
         { "name": "Framer Motion" }
       ]
     },
@@ -232,7 +233,7 @@
       "vid": "/vid/BDI_Capital.webm",
       "title": "BDI Capital Ltd.",
       "subtitle": "Consultancy",
-      "desc": "Made brand website and developed e-commerce page in their website",
+      "desc": "Designed and developed a professional brand website, enhancing digital presence with a modern, responsive interface. while optimizing performance and UX. ",
       "stack": [
         { "name": "HTML5" },
         { "name": "JavaScript" },
@@ -274,7 +275,8 @@
         { "name": "MaterialTailwind" },
         { "name": "Firebase" }
       ]
-    }, {
+    },
+    {
       "id": 3,
       "vid": "/vid/iLead_ICT.webm",
       "url": "",
@@ -282,7 +284,8 @@
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
       "stack": [{ "name": "Wordpress" }, { "name": "Beaver Builder" }]
-    },   {
+    },
+    {
       "id": 4,
       "vid": "/vid/Intelco_Fiber.webm",
       "url": "",
@@ -291,6 +294,5 @@
       "desc": "Issued Feb 2024",
       "stack": [{ "name": "Wordpress" }, { "name": "Beaver Builder" }]
     }
-
   ]
 }
