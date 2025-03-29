@@ -106,6 +106,27 @@
   border-radius: 1rem;
 }
 
+.resume__wrapper {
+  margin-top: var(--mb-2-5);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-weight: var(--font-semi-bold);
+  transition: 0.2s ease-in-out;
+}
+
+.resume__wrapper:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--title-color);
+  transition: 0.2s ease-in-out;
+}
+
+.resume__wrapper:hover .resume__icon {
+  transform: translate(0.2rem);
+  transition: 0.2s ease-in-out;
+}
+
 @media screen and (max-width: 1024px) {
   .career__skill {
     flex-wrap: wrap;

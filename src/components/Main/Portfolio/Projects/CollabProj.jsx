@@ -3,10 +3,8 @@ import "./Projects.css";
 import Data from "../../../../assets/json/Data.json";
 import { iconComponents } from "../../../../assets/json/Icon";
 
-
-
 function CollabProj() {
-  const IconComponent = iconComponents.LuArrowUpRight
+  const IconComponent = iconComponents.LuArrowUpRight;
   return (
     <div className="project">
       <h2 className="section__title">Hack & Stack</h2>
@@ -15,7 +13,6 @@ function CollabProj() {
         <div className="project__wrapper">
           <div className="project__content grid">
             {Data.collabproj.map((colproj) => (
-          
               <div key={colproj.id} className="project__data">
                 <video
                   src={colproj.vid}
@@ -38,8 +35,9 @@ function CollabProj() {
           </div>
         </div>
       </div>
-        <span className="project__links">View Project Archive <IconComponent className="project__links-icon" />
-        </span>
+      <span className="project__links">
+        View Project Archive <IconComponent className="project__links-icon" />
+      </span>
     </div>
   );
 }
