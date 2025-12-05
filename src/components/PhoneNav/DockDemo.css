@@ -1,0 +1,70 @@
+.dock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: #f3f3f3;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  /* Floating at the bottom */
+  position: fixed;
+  bottom: 16px; /* distance from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  /* Optional: mobile width */
+  max-width: 90%;
+}
+
+/* Dock items */
+.dock-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dock-item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.dock-item a:hover {
+  transform: scale(1.2);
+}
+
+.dock-tooltip {
+  position: absolute;
+  top: -1.5rem;
+  font-size: 0.75rem;
+  background: black;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.dock-item:hover .dock-tooltip {
+  opacity: 1;
+}
+
+.dock-separator {
+  width: 1px;
+  height: 32px;
+  background: #ccc;
+}
