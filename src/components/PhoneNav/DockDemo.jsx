@@ -17,13 +17,19 @@ export default function DockDemo() {
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
       <div className="dock">
-        {DATA.navbar.map((item) => (
-          <div key={item.label} className="dock-item">
-            <Link to={item.to} title={item.label}>
-              <item.icon style={{ width: "32px", height: "32px" }} />
-            </Link>
-            <span className="dock-tooltip">{item.label}</span>
-          </div>
+        {DATA.navbar.map((item, index) => (
+          <React.Fragment key={item.label}>
+            <div className="dock-item">
+              <Link to={item.to} title={item.label}>
+                <item.icon style={{ width: "32px", height: "32px" }} />
+              </Link>
+              <span className="dock-tooltip">{item.label}</span>
+            </div>
+
+            {index !== DATA.navbar.length - 1 && (
+              <div className="dock-separator"></div>
+            )}
+          </React.Fragment>
         ))}
       </div>
     </div>
