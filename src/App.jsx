@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
 import AsideNav from "./components/Aside/Aside";
-import DockDemo from "./components/PhoneNav/Dockdemo";
+import DockDemo from "./components/PhoneNav/DockDemo";
 
 function App() {
   const navigate = useNavigate();
