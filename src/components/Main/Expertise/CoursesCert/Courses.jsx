@@ -5,9 +5,9 @@ import Data from "../../../../assets/json/Data.json";
 function Courses() {
   const [selectedCert, setSelectedCert] = useState(null);
 
-  const imgClick = (cert) => {
-    setSelectedCert(cert);
-  };
+  //const imgClick = (cert) => {
+  //  setSelectedCert(cert);
+  // };
 
   const closeModal = () => {
     setSelectedCert(null);

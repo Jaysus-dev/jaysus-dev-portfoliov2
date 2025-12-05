@@ -7,11 +7,10 @@ function App() {
   const navigate = useNavigate();
 
   {
-    /*  // Redirect to the root path ("/") on every render
-  useEffect(() => {
-    navigate("/profile", { replace: true });
-  }, [navigate]);
-*/
+    // Redirect to the root path ("/") on every render
+    useEffect(() => {
+      navigate("/profile", { replace: true });
+    }, [navigate]);
   }
   const location = useLocation();
   const isHiddenPage =

@@ -7,30 +7,35 @@ function CollabProj() {
   const IconComponent = iconComponents.LuArrowUpRight;
   return (
     <div className="project">
-      <h2 className="section__title">Hack & Stack</h2>
-      <span className="section__subtitle"> Team collaboration Projects</span>
+      <h2 className="section__title">Strukt</h2>
+      <span className="section__subtitle">
+        {" "}
+        Selected team collaboration Projects
+      </span>
       <div className="project__container">
         <div className="project__wrapper">
           <div className="project__content grid">
             {Data.collabproj.map((colproj) => (
-              <div key={colproj.id} className="project__data">
-                <video
-                  src={colproj.vid}
-                  className="project__video"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                ></video>
-                <div className="col__project__info">
-                  <h3>{colproj.title}</h3>
-                  <div className="project__stack">
-                    {colproj.stack?.map((stack, stackIndex) => (
-                      <p key={stackIndex}>{stack.name}</p>
-                    ))}
+              <a href={colproj.url} target="_blank" rel="noopener noreferrer">
+                <div key={colproj.id} className="project__data">
+                  <video
+                    src={colproj.vid}
+                    className="project__video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  ></video>
+                  <div className="col__project__info">
+                    <h3>{colproj.title}</h3>
+                    <div className="project__stack">
+                      {colproj.stack?.map((stack, stackIndex) => (
+                        <p key={stackIndex}>{stack.name}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

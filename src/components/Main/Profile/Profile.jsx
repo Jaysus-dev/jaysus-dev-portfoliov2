@@ -1,6 +1,7 @@
 import React from "react";
 import About from "./About/About";
 import Career from "./Career/Career";
+import CV from "../../../assets/Estoquia_CV.pdf";
 import { iconComponents } from "../../../assets/json/Icon";
 
 function Profile() {
@@ -9,7 +10,7 @@ function Profile() {
     <>
       <About />
       <Career />
-      <a href="" className="resume__wrapper" target="__blank">
+      <a href={CV} className="resume__wrapper" target="__blank">
         View Full Résumé <IconComponent className="resume__icon" />
       </a>
     </>

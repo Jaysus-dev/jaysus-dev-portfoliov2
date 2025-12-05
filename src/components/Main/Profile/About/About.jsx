@@ -32,13 +32,15 @@ function About() {
 
         <article className="profile__tweet">
           <p>
-            I’m a front-end developer specializing in crafting accessible
-            precision-driven designs. I develop responsive, user-friendly
-            websites using <strong>HTML, CSS, JavaScript</strong>, and
-            frameworks like <strong>ReactJS</strong> and{" "}
-            <strong>TailwindCSS</strong>.
+            I’m a Fullstack Developer specializing in crafting accessible,
+            precision-driven designs. I build responsive, user-friendly websites
+            and applications using <strong>HTML, CSS, JavaScript</strong>, and
+            frameworks such as <strong>ReactJS</strong> and{" "}
+            <strong>TailwindCSS</strong>. Currently, I’m working at
+            <strong> National Care for Mental Health </strong> as a{" "}
+            <strong>Fullstack Developer II</strong>, contributing to both
+            front-end engineering and fullstack development.
           </p>
-
           <p>
             Previously, I worked as a <strong>Junior Web Developer</strong> at{" "}
             <strong>BDI Capital Ltd.</strong>, where I focused on{" "}

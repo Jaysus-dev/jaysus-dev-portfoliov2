@@ -65,13 +65,13 @@
       "className": "profile__exp-icon",
       "icon": "FaCode",
       "title": "Experience",
-      "subtitle": "2 years"
+      "subtitle": "4 years"
     },
     {
       "className": "profile__exp-icon",
       "icon": "GrAchievement",
       "title": "Completed",
-      "subtitle": "2 Projects"
+      "subtitle": " Projects"
     },
     {
       "className": "profile__exp-icon",
@@ -216,6 +216,7 @@
     {
       "id": 1,
       "vid": "/vid/Jay_Estoquia.webm",
+      "url": "https://jay-estoquia.vercel.app/",
       "title": "Jay Estoquia Web",
       "subtitle": "Personal",
       "desc": "A creative showcase of my work, skills, and passion for web development. Explore my projects, dive into my tech stack, and let’s build something amazing together.",
@@ -231,6 +232,7 @@
     {
       "id": 2,
       "vid": "/vid/BDI_Capital.webm",
+      "url": "https://www.bdi-capital.com/",
       "title": "BDI Capital Ltd.",
       "subtitle": "Consultancy",
       "desc": "Designed and developed a professional brand website, enhancing digital presence with a modern, responsive interface. while optimizing performance and UX. ",
@@ -248,7 +250,7 @@
     {
       "id": 1,
       "vid": "/vid/Figment_Clique.webm",
-      "url": "",
+      "url": "https://www.figmentclique.com/",
       "title": "Figment Clique",
       "subtitle": "Lorem Ipsum",
       "desc": "Lorem Ipsum",
@@ -273,13 +275,14 @@
         { "name": "Vite+React.JS" },
         { "name": "TailwindCSS" },
         { "name": "MaterialTailwind" },
+        { "name": "Formik" },
         { "name": "Firebase" }
       ]
     },
     {
       "id": 3,
       "vid": "/vid/iLead_ICT.webm",
-      "url": "",
+      "url": "https://ileadict.com/",
       "title": "ILead ICT Solutions",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
@@ -288,7 +291,7 @@
     {
       "id": 4,
       "vid": "/vid/Intelco_Fiber.webm",
-      "url": "",
+      "url": "https://intelcofiber.com/",
       "title": "Intelco Fiber",
       "subtitle": "Udemy",
       "desc": "Issued Feb 2024",
