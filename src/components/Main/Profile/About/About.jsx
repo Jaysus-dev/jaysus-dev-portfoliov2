@@ -32,21 +32,26 @@ function About() {
 
         <article className="profile__tweet">
           <p>
-            I’m a Fullstack Developer specializing in crafting accessible,
-            precision-driven designs. I build responsive, user-friendly websites
-            and applications using <strong>HTML, CSS, JavaScript</strong>, and
-            frameworks such as <strong>ReactJS</strong> and{" "}
-            <strong>TailwindCSS</strong>. Currently, I’m working at
-            <strong> National Care for Mental Health </strong> as a{" "}
-            <strong>Fullstack Developer II</strong>, contributing to both
-            front-end engineering and fullstack development.
+            I build{" "}
+            <strong>fast, scalable, and user-focused web applications</strong>{" "}
+            that combine clean design with reliable engineering. As a{" "}
+            <strong>Full Stack Developer</strong>, I specialize in creating
+            modern, responsive, and high-performance solutions using{" "}
+            <strong>Laravel, Vue, React, TypeScript, JavaScript,</strong> and{" "}
+            <strong>Tailwind CSS</strong>. From intuitive user interfaces to
+            robust backend APIs, I transform ideas into seamless digital
+            experiences.
           </p>
+
           <p>
-            Previously, I worked as a <strong>Junior Web Developer</strong> at{" "}
-            <strong>BDI Capital Ltd.</strong>, where I focused on{" "}
-            <strong>full-stack development</strong>. My responsibilities
-            included managing hosting, deployment, and configuring email
-            domains.
+            Currently, I work as a <strong>Full Stack Developer III</strong> at
+            the <strong>National Center for Mental Health</strong>, where I
+            develop and enhance enterprise healthcare systems that improve
+            clinical workflows and patient management. Previously, I worked as a{" "}
+            <strong>Junior Web Developer</strong> at{" "}
+            <strong>BDI Capital Ltd.</strong>, delivering full-stack solutions
+            while managing deployments, hosting infrastructure, and domain
+            configurations.
           </p>
 
           <p>

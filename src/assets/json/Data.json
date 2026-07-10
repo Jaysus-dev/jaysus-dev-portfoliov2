@@ -1,11 +1,6 @@
 {
   "typewriter": {
-    "words": [
-      "UI/UX Enthusiast",
-      "Front-end Developer",
-      "Junior Web Developer",
-      "Full-Stack Developer II"
-    ],
+    "words": ["UI/UX Enthusiast", "Front-End Engineer", "Full-Stack Developer"],
     "typeSpeed": 70,
     "deleteSpeed": 20,
     "loop": true
