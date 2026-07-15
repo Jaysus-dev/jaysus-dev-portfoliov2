@@ -32,32 +32,25 @@ function About() {
 
         <article className="profile__tweet">
           <p>
-            I build{" "}
-            <strong>fast, scalable, and user-focused web applications</strong>{" "}
-            that combine clean design with reliable engineering. As a{" "}
-            <strong>Full Stack Developer</strong>, I specialize in creating
-            modern, responsive, and high-performance solutions using{" "}
-            <strong>Laravel, Vue, React, TypeScript, JavaScript,</strong> and{" "}
-            <strong>Tailwind CSS</strong>. From intuitive user interfaces to
-            robust backend APIs, I transform ideas into seamless digital
-            experiences.
+            I specialize in transforming ideas into polished web experiences.
+            From interactive user interfaces to reliable backend services, I
+            build applications that are intuitive, performant, and ready for
+            production as a{" "}
+            <strong>Frontend Engineer & Full Stack Developer</strong>.
           </p>
 
           <p>
             Currently, I work as a <strong>Full Stack Developer III</strong> at
-            the <strong>National Center for Mental Health</strong>, where I
-            develop and enhance enterprise healthcare systems that improve
-            clinical workflows and patient management. Previously, I worked as a{" "}
-            <strong>Junior Web Developer</strong> at{" "}
-            <strong>BDI Capital Ltd.</strong>, delivering full-stack solutions
-            while managing deployments, hosting infrastructure, and domain
-            configurations.
+            the <strong>National Center for Mental Health</strong>, My current
+            tech stack is <strong>LaraVue</strong> with{" "}
+            <strong>TypeScript</strong>, which I use to develop scalable
+            enterprise healthcare systems that improve clinical workflows and
+            patient management.
           </p>
-
           <p>
-            Outside of work, I enjoy exploring new technologies, working on
-            personal projects, and embracing lifelong learning to create
-            meaningful digital experiences.
+            Outside of work, I enjoy exploring new technologies, building
+            personal projects, and continuously improving my skills to create
+            better digital experiences.
           </p>
         </article>
         <div className="profile__exp">
