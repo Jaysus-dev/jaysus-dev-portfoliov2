@@ -81,10 +81,12 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
 .career__bottom span {
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
 }
+
 .career__bottom p {
   line-height: 22px;
   font-size: var(--small-font-size);
@@ -92,12 +94,29 @@
   margin-bottom: var(--mb-0-5);
   font-weight: 400;
 }
-.career__promotion {
-  color: var(--desc-color);
-  font-size: var(--small-font-size);
+.career__positions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
-.career__promotion > span {
-  font: var(--smaller-font-size);
+
+.career__position-header {
+  display: flex;
+  justify-content: space-between;
+}
+.career__position-title {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.career__position-header > .career__date {
+  font-size: var(--smaller-font-size);
+  color: var(--desc-color);
+}
+
+.career__position-desc {
+  margin-top: 0.5rem;
+  text-align: justify;
 }
 .career__skill {
   display: flex;

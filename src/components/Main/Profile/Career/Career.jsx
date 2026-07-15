@@ -35,13 +35,34 @@ function Career() {
                       <span className="career__date">{item.date}</span>
                     </div>
                     <div className="career__bottom">
-                      <span>{item.subtitle}</span>
-                      {item.promotion && (
-                        <span className="career__promotion">
-                          <CornerLeftUp size={14} /> {item.promotion}
-                        </span>
+                      {item.positions ? (
+                        <div className="career__positions">
+                          {item.positions.map((position, index) => (
+                            <div key={index} className="career__position">
+                              <div className="career__position-header">
+                                <span className="career__position-title">
+                                  {index > 0 && <CornerLeftUp size={14} />}
+                                  {position.title}
+                                </span>
+
+                                <span className="career__date">
+                                  {position.date}
+                                </span>
+                              </div>
+
+                              <p className="career__position-desc">
+                                {position.desc}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <>
+                          <span>{item.subtitle}</span>
+                          <p>{item.desc}</p>
+                        </>
                       )}
-                      <p>{item.desc}</p>
+
                       <div className="career__skill">
                         {item.tech?.map((skill, skillIndex) => (
                           <span key={skillIndex}>{skill.name}</span>

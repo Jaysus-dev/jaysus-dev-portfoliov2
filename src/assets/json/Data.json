@@ -117,21 +117,29 @@
 
     {
       "id": "work",
-      "title": "National Center for Mental Health ",
+      "title": "National Center for Mental Health",
       "image": "/img/NCMH_Logo.jpg",
       "date": "Mar 2025 — Present",
-      "subtitle": "Full-Stack Developer III",
-      "promotion": "Full-Stack Developer II",
-      "desc": "Designing and developing secure digital solutions to enhance mental healthcare services. Leading end-to-end application development from requirements analysis to deployment. Collaborating with cross-functional teams to implement system improvements and optimize service delivery workflows. Ensuring compliance with healthcare data regulations while maintaining high performance standards.",
+      "positions": [
+        {
+          "title": "Full Stack Developer III",
+          "date": "Jul 2026 — Present",
+          "current": true,
+          "desc": "Leading the development of enterprise healthcare systems, building scalable frontend applications with Vue.js and Laravel, improving clinical workflows, and mentoring junior developers."
+        },
+        {
+          "title": "Full Stack Developer II",
+          "date": "Mar 2025 — Jun 2026",
+          "desc": "Designed and developed secure digital solutions to enhance mental healthcare services. Collaborated with cross-functional teams to implement system improvements and optimize service delivery workflows."
+        }
+      ],
       "tech": [
-        { "name": "HTML5" },
-        { "name": "JavaScript" },
         { "name": "Vue.js" },
+        { "name": "TypeScript" },
+        { "name": "Laravel" },
         { "name": "Inertia.js" },
-        { "name": "CSS3" },
         { "name": "TailwindCSS" },
         { "name": "PHP" },
-        { "name": "Laravel" },
         { "name": "Docker" },
         { "name": "GitLab" }
       ]
