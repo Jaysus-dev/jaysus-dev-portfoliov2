@@ -1,6 +1,7 @@
 import React from "react";
 import "./Career.css";
 import Data from "../../../../assets/json/Data.json";
+import { CornerDownRight, CornerLeftUp } from "lucide-react";
 function Career() {
   return (
     <section className="career ">
@@ -35,6 +36,11 @@ function Career() {
                     </div>
                     <div className="career__bottom">
                       <span>{item.subtitle}</span>
+                      {item.promotion && (
+                        <span className="career__promotion">
+                          <CornerLeftUp size={14} /> {item.promotion}
+                        </span>
+                      )}
                       <p>{item.desc}</p>
                       <div className="career__skill">
                         {item.tech?.map((skill, skillIndex) => (

@@ -36,11 +36,11 @@ function About() {
             From interactive user interfaces to reliable backend services, I
             build applications that are intuitive, performant, and ready for
             production as a{" "}
-            <strong>Frontend Engineer & Full Stack Developer</strong>.
+            <strong>Front-End Engineer & Full-Stack Developer</strong>.
           </p>
 
           <p>
-            Currently, I work as a <strong>Full Stack Developer III</strong> at
+            Currently, I work as a <strong>Full-Stack Developer III</strong> at
             the <strong>National Center for Mental Health</strong>, My current
             tech stack is <strong>LaraVue</strong> with{" "}
             <strong>TypeScript</strong>, which I use to develop scalable

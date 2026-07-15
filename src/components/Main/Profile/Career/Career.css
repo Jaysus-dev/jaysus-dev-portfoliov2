@@ -92,6 +92,13 @@
   margin-bottom: var(--mb-0-5);
   font-weight: 400;
 }
+.career__promotion {
+  color: var(--desc-color);
+  font-size: var(--small-font-size);
+}
+.career__promotion > span {
+  font: var(--smaller-font-size);
+}
 .career__skill {
   display: flex;
   flex-wrap: wrap;

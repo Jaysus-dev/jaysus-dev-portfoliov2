@@ -60,13 +60,13 @@
       "className": "profile__exp-icon",
       "icon": "FaCode",
       "title": "Experience",
-      "subtitle": "4 years"
+      "subtitle": "3+ years"
     },
     {
       "className": "profile__exp-icon",
       "icon": "GrAchievement",
       "title": "Completed",
-      "subtitle": " Projects"
+      "subtitle": " ♾️ Projects"
     },
     {
       "className": "profile__exp-icon",
@@ -114,12 +114,14 @@
       "desc": "My vocational course sparked my passion for technology, where I discovered the power of solving problems and creating solutions through IT. This early inspiration drives my journey in the tech world.",
       "tech": [{ "name": "Visual Basic" }]
     },
+
     {
       "id": "work",
-      "title": "NCMH — DOH ",
+      "title": "National Center for Mental Health ",
       "image": "/img/NCMH_Logo.jpg",
       "date": "Mar 2025 — Present",
-      "subtitle": "Fullstack Developer II",
+      "subtitle": "Full-Stack Developer III",
+      "promotion": "Full-Stack Developer II",
       "desc": "Designing and developing secure digital solutions to enhance mental healthcare services. Leading end-to-end application development from requirements analysis to deployment. Collaborating with cross-functional teams to implement system improvements and optimize service delivery workflows. Ensuring compliance with healthcare data regulations while maintaining high performance standards.",
       "tech": [
         { "name": "HTML5" },
